@@ -1,0 +1,1947 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.25.0114.1153                               -->
+<workbook original-version='18.1' source-build='2024.3.3 (20243.25.0114.1153)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <RelationshipCalculations />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='genre_roi' inline='true' name='federated.15y1ybh1srtyhr0zrf6t11709fgc' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='genre_roi' name='textscan.1ygs6qi10d2vh01fropjc1lhkbkk'>
+            <connection class='textscan' directory='C:/Flatiron/Projects/Phase2Project/data' filename='genre_roi.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='cleaned_budgets' name='textscan.1gnv1zl10faww61baehcp0rehyve'>
+            <connection class='textscan' directory='C:/Flatiron/Projects/Phase2Project/data' filename='cleaned_budgets.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='textscan.1gnv1zl10faww61baehcp0rehyve' name='genre_roi.csv' table='[genre_roi#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='string' name='genre' ordinal='1' />
+              <column datatype='real' name='average_roi' ordinal='2' />
+              <column datatype='integer' name='count' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1gnv1zl10faww61baehcp0rehyve' name='cleaned_budgets.csv' table='[cleaned_budgets#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='id' ordinal='0' />
+              <column datatype='date' name='release_date' ordinal='1' />
+              <column datatype='string' name='movie' ordinal='2' />
+              <column datatype='integer' name='production_budget' ordinal='3' />
+              <column datatype='integer' name='domestic_gross' ordinal='4' />
+              <column datatype='integer' name='worldwide_gross' ordinal='5' />
+              <column datatype='real' name='return_ratio' ordinal='6' />
+            </columns>
+          </relation>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[genre_roi.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[cleaned_budgets.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[genre_roi.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>genre</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[genre]</local-name>
+            <parent-name>[genre_roi.csv]</parent-name>
+            <remote-alias>genre</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>average_roi</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[average_roi]</local-name>
+            <parent-name>[genre_roi.csv]</parent-name>
+            <remote-alias>average_roi</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[count]</local-name>
+            <parent-name>[genre_roi.csv]</parent-name>
+            <remote-alias>count</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[cleaned_budgets.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>release_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[release_date]</local-name>
+            <parent-name>[cleaned_budgets.csv]</parent-name>
+            <remote-alias>release_date</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>movie</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[movie]</local-name>
+            <parent-name>[cleaned_budgets.csv]</parent-name>
+            <remote-alias>movie</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>production_budget</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[production_budget]</local-name>
+            <parent-name>[cleaned_budgets.csv]</parent-name>
+            <remote-alias>production_budget</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>domestic_gross</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[domestic_gross]</local-name>
+            <parent-name>[cleaned_budgets.csv]</parent-name>
+            <remote-alias>domestic_gross</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>worldwide_gross</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[worldwide_gross]</local-name>
+            <parent-name>[cleaned_budgets.csv]</parent-name>
+            <remote-alias>worldwide_gross</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>return_ratio</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[return_ratio]</local-name>
+            <parent-name>[cleaned_budgets.csv]</parent-name>
+            <remote-alias>return_ratio</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='cleaned_budgets.csv' datatype='table' name='[__tableau_internal_object_id__].[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]' role='measure' type='quantitative' />
+      <column caption='genre_roi.csv' datatype='table' name='[__tableau_internal_object_id__].[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]' role='measure' type='quantitative' />
+      <column caption='Average Roi' datatype='real' name='[average_roi]' role='measure' type='quantitative' />
+      <column caption='Count' datatype='integer' name='[count]' role='measure' type='quantitative' />
+      <column caption='Domestic Gross' datatype='integer' name='[domestic_gross]' role='measure' type='quantitative' />
+      <column caption='Genre' datatype='string' name='[genre]' role='dimension' type='nominal' />
+      <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column caption='Movie' datatype='string' name='[movie]' role='dimension' type='nominal' />
+      <column caption='Production Budget' datatype='integer' name='[production_budget]' role='measure' type='quantitative' />
+      <column caption='Release Date' datatype='date' name='[release_date]' role='dimension' type='ordinal' />
+      <column caption='Return Ratio' datatype='real' name='[return_ratio]' role='measure' type='quantitative' />
+      <column caption='Worldwide Gross' datatype='integer' name='[worldwide_gross]' role='measure' type='quantitative' />
+      <column-instance column='[genre]' derivation='None' name='[none:genre:nk]' pivot='key' type='nominal' />
+      <column-instance column='[movie]' derivation='None' name='[none:movie:nk]' pivot='key' type='nominal' />
+      <column-instance column='[return_ratio]' derivation='None' name='[none:return_ratio:ok]' pivot='key' type='ordinal' />
+      <group caption='Top Movies by ROI' name='[Top Movies by ROI]' name-style='unqualified' user:ui-builder='filter-group'>
+        <groupfilter count='20' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+          <groupfilter direction='DESC' expression='AVG([return_ratio])' function='order' user:ui-marker='order'>
+            <groupfilter function='level-members' level='[movie]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+          </groupfilter>
+        </groupfilter>
+      </group>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/Eddie/AppData/Local/Temp/TableauTemp/#TableauTemp_0h1tp6r1sy43yp18csifc11idh4v.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/11/2025 07:14:15 PM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD' table='[Extract].[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]' type='table' />
+            <relation name='cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F' table='[Extract].[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]' type='table' />
+          </relation>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>genre_roi.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>genre</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[genre]</local-name>
+              <parent-name>[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]</parent-name>
+              <remote-alias>genre</remote-alias>
+              <ordinal>1</ordinal>
+              <family>genre_roi.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>average_roi</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[average_roi]</local-name>
+              <parent-name>[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]</parent-name>
+              <remote-alias>average_roi</remote-alias>
+              <ordinal>2</ordinal>
+              <family>genre_roi.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>count</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[count]</local-name>
+              <parent-name>[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]</parent-name>
+              <remote-alias>count</remote-alias>
+              <ordinal>3</ordinal>
+              <family>genre_roi.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[id]</local-name>
+              <parent-name>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</parent-name>
+              <remote-alias>id</remote-alias>
+              <ordinal>4</ordinal>
+              <family>cleaned_budgets.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>100</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>release_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[release_date]</local-name>
+              <parent-name>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</parent-name>
+              <remote-alias>release_date</remote-alias>
+              <ordinal>5</ordinal>
+              <family>cleaned_budgets.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1344</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>movie</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[movie]</local-name>
+              <parent-name>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</parent-name>
+              <remote-alias>movie</remote-alias>
+              <ordinal>6</ordinal>
+              <family>cleaned_budgets.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4253</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>production_budget</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[production_budget]</local-name>
+              <parent-name>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</parent-name>
+              <remote-alias>production_budget</remote-alias>
+              <ordinal>7</ordinal>
+              <family>cleaned_budgets.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>357</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>domestic_gross</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[domestic_gross]</local-name>
+              <parent-name>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</parent-name>
+              <remote-alias>domestic_gross</remote-alias>
+              <ordinal>8</ordinal>
+              <family>cleaned_budgets.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3972</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>worldwide_gross</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[worldwide_gross]</local-name>
+              <parent-name>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</parent-name>
+              <remote-alias>worldwide_gross</remote-alias>
+              <ordinal>9</ordinal>
+              <family>cleaned_budgets.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4055</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>return_ratio</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[return_ratio]</local-name>
+              <parent-name>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</parent-name>
+              <remote-alias>return_ratio</remote-alias>
+              <ordinal>10</ordinal>
+              <family>cleaned_budgets.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>819</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' rowDisplayCount='100' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:genre:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Comedy&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Thriller&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;History&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Mystery&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Action&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Romance&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Horror&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Family&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Documentary&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Crime&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Drama&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Biography&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Adventure&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Sci-Fi&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <default-sorts>
+        <natural-sort column='[none:movie:nk]' direction='ASC' />
+        <manual-sort column='[none:return_ratio:ok]' direction='ASC'>
+          <dictionary>
+            <bucket>9.9800000000000004</bucket>
+            <bucket>9.9499999999999993</bucket>
+            <bucket>9.9399999999999995</bucket>
+            <bucket>9.8800000000000008</bucket>
+            <bucket>9.8699999999999992</bucket>
+            <bucket>9.7899999999999991</bucket>
+            <bucket>9.7300000000000004</bucket>
+            <bucket>9.7200000000000006</bucket>
+            <bucket>9.6999999999999993</bucket>
+            <bucket>9.5099999999999998</bucket>
+            <bucket>9.5</bucket>
+            <bucket>9.4399999999999995</bucket>
+            <bucket>9.4100000000000001</bucket>
+            <bucket>9.3800000000000008</bucket>
+            <bucket>9.3699999999999992</bucket>
+            <bucket>9.3100000000000005</bucket>
+            <bucket>9.2799999999999994</bucket>
+            <bucket>9.2400000000000002</bucket>
+            <bucket>9.2300000000000004</bucket>
+            <bucket>9.1500000000000004</bucket>
+            <bucket>9.1099999999999994</bucket>
+            <bucket>9.0399999999999991</bucket>
+            <bucket>9.0299999999999994</bucket>
+            <bucket>88.590000000000003</bucket>
+            <bucket>85.569999999999993</bucket>
+            <bucket>8.9600000000000009</bucket>
+            <bucket>8.9399999999999995</bucket>
+            <bucket>8.9199999999999999</bucket>
+            <bucket>8.9100000000000001</bucket>
+            <bucket>8.8699999999999992</bucket>
+            <bucket>8.8399999999999999</bucket>
+            <bucket>8.7200000000000006</bucket>
+            <bucket>8.7100000000000009</bucket>
+            <bucket>8.6199999999999992</bucket>
+            <bucket>8.5500000000000007</bucket>
+            <bucket>8.5399999999999991</bucket>
+            <bucket>8.5299999999999994</bucket>
+            <bucket>8.5</bucket>
+            <bucket>8.4600000000000009</bucket>
+            <bucket>8.4499999999999993</bucket>
+            <bucket>8.4399999999999995</bucket>
+            <bucket>8.4299999999999997</bucket>
+            <bucket>8.4000000000000004</bucket>
+            <bucket>8.3699999999999992</bucket>
+            <bucket>8.3200000000000003</bucket>
+            <bucket>8.3100000000000005</bucket>
+            <bucket>8.2799999999999994</bucket>
+            <bucket>8.2699999999999996</bucket>
+            <bucket>8.2599999999999998</bucket>
+            <bucket>8.25</bucket>
+            <bucket>8.2300000000000004</bucket>
+            <bucket>8.2100000000000009</bucket>
+            <bucket>8.1699999999999999</bucket>
+            <bucket>8.1600000000000001</bucket>
+            <bucket>8.1500000000000004</bucket>
+            <bucket>8.1400000000000006</bucket>
+            <bucket>8.1300000000000008</bucket>
+            <bucket>8.1099999999999994</bucket>
+            <bucket>8.0899999999999999</bucket>
+            <bucket>8.0800000000000001</bucket>
+            <bucket>8.0700000000000003</bucket>
+            <bucket>8.0500000000000007</bucket>
+            <bucket>8.0399999999999991</bucket>
+            <bucket>8.0199999999999996</bucket>
+            <bucket>73.980000000000004</bucket>
+            <bucket>7.9100000000000001</bucket>
+            <bucket>7.8899999999999997</bucket>
+            <bucket>7.8600000000000003</bucket>
+            <bucket>7.8399999999999999</bucket>
+            <bucket>7.8200000000000003</bucket>
+            <bucket>7.79</bucket>
+            <bucket>7.7800000000000002</bucket>
+            <bucket>7.7300000000000004</bucket>
+            <bucket>7.7000000000000002</bucket>
+            <bucket>7.6899999999999995</bucket>
+            <bucket>7.6100000000000003</bucket>
+            <bucket>7.5999999999999996</bucket>
+            <bucket>7.5899999999999999</bucket>
+            <bucket>7.5800000000000001</bucket>
+            <bucket>7.5700000000000003</bucket>
+            <bucket>7.5300000000000002</bucket>
+            <bucket>7.5199999999999996</bucket>
+            <bucket>7.4900000000000002</bucket>
+            <bucket>7.4800000000000004</bucket>
+            <bucket>7.4699999999999998</bucket>
+            <bucket>7.46</bucket>
+            <bucket>7.4500000000000002</bucket>
+            <bucket>7.4299999999999997</bucket>
+            <bucket>7.4199999999999999</bucket>
+            <bucket>7.4100000000000001</bucket>
+            <bucket>7.4000000000000004</bucket>
+            <bucket>7.3600000000000003</bucket>
+            <bucket>7.3399999999999999</bucket>
+            <bucket>7.3099999999999996</bucket>
+            <bucket>7.2999999999999998</bucket>
+            <bucket>7.2800000000000002</bucket>
+            <bucket>7.2599999999999998</bucket>
+            <bucket>7.25</bucket>
+            <bucket>7.2300000000000004</bucket>
+            <bucket>7.2199999999999998</bucket>
+            <bucket>7.1900000000000004</bucket>
+            <bucket>7.1600000000000001</bucket>
+            <bucket>7.1500000000000004</bucket>
+            <bucket>7.1399999999999997</bucket>
+            <bucket>7.1299999999999999</bucket>
+            <bucket>7.1100000000000003</bucket>
+            <bucket>7.0800000000000001</bucket>
+            <bucket>7.0700000000000003</bucket>
+            <bucket>7.0599999999999996</bucket>
+            <bucket>7.0499999999999998</bucket>
+            <bucket>7.0300000000000002</bucket>
+            <bucket>7.0199999999999996</bucket>
+            <bucket>66.379999999999995</bucket>
+            <bucket>65.950000000000003</bucket>
+            <bucket>65.579999999999998</bucket>
+            <bucket>63.359999999999999</bucket>
+            <bucket>6.9900000000000002</bucket>
+            <bucket>6.9699999999999998</bucket>
+            <bucket>6.9500000000000002</bucket>
+            <bucket>6.9399999999999995</bucket>
+            <bucket>6.9199999999999999</bucket>
+            <bucket>6.8799999999999999</bucket>
+            <bucket>6.8700000000000001</bucket>
+            <bucket>6.8600000000000003</bucket>
+            <bucket>6.8499999999999996</bucket>
+            <bucket>6.7999999999999998</bucket>
+            <bucket>6.79</bucket>
+            <bucket>6.7800000000000002</bucket>
+            <bucket>6.7699999999999996</bucket>
+            <bucket>6.75</bucket>
+            <bucket>6.7400000000000002</bucket>
+            <bucket>6.7300000000000004</bucket>
+            <bucket>6.7199999999999998</bucket>
+            <bucket>6.71</bucket>
+            <bucket>6.7000000000000002</bucket>
+            <bucket>6.6799999999999997</bucket>
+            <bucket>6.6699999999999999</bucket>
+            <bucket>6.6500000000000004</bucket>
+            <bucket>6.6299999999999999</bucket>
+            <bucket>6.6200000000000001</bucket>
+            <bucket>6.5700000000000003</bucket>
+            <bucket>6.5499999999999998</bucket>
+            <bucket>6.5</bucket>
+            <bucket>6.4900000000000002</bucket>
+            <bucket>6.4800000000000004</bucket>
+            <bucket>6.46</bucket>
+            <bucket>6.4400000000000004</bucket>
+            <bucket>6.4199999999999999</bucket>
+            <bucket>6.3799999999999999</bucket>
+            <bucket>6.3600000000000003</bucket>
+            <bucket>6.3499999999999996</bucket>
+            <bucket>6.3300000000000001</bucket>
+            <bucket>6.2800000000000002</bucket>
+            <bucket>6.2699999999999996</bucket>
+            <bucket>6.25</bucket>
+            <bucket>6.2400000000000002</bucket>
+            <bucket>6.2199999999999998</bucket>
+            <bucket>6.21</bucket>
+            <bucket>6.2000000000000002</bucket>
+            <bucket>6.1699999999999999</bucket>
+            <bucket>6.1500000000000004</bucket>
+            <bucket>6.1299999999999999</bucket>
+            <bucket>6.1200000000000001</bucket>
+            <bucket>6.1100000000000003</bucket>
+            <bucket>6.0800000000000001</bucket>
+            <bucket>6.0499999999999998</bucket>
+            <bucket>6.0199999999999996</bucket>
+            <bucket>6.0099999999999998</bucket>
+            <bucket>58.170000000000002</bucket>
+            <bucket>54.789999999999999</bucket>
+            <bucket>54.460000000000001</bucket>
+            <bucket>52.369999999999997</bucket>
+            <bucket>50.07</bucket>
+            <bucket>5.9900000000000002</bucket>
+            <bucket>5.96</bucket>
+            <bucket>5.9500000000000002</bucket>
+            <bucket>5.9399999999999995</bucket>
+            <bucket>5.9299999999999997</bucket>
+            <bucket>5.9000000000000004</bucket>
+            <bucket>5.8899999999999997</bucket>
+            <bucket>5.8700000000000001</bucket>
+            <bucket>5.8499999999999996</bucket>
+            <bucket>5.8399999999999999</bucket>
+            <bucket>5.8300000000000001</bucket>
+            <bucket>5.8200000000000003</bucket>
+            <bucket>5.8100000000000005</bucket>
+            <bucket>5.7999999999999998</bucket>
+            <bucket>5.7599999999999998</bucket>
+            <bucket>5.75</bucket>
+            <bucket>5.7400000000000002</bucket>
+            <bucket>5.7300000000000004</bucket>
+            <bucket>5.71</bucket>
+            <bucket>5.6799999999999997</bucket>
+            <bucket>5.6699999999999999</bucket>
+            <bucket>5.6600000000000001</bucket>
+            <bucket>5.6500000000000004</bucket>
+            <bucket>5.6399999999999997</bucket>
+            <bucket>5.6299999999999999</bucket>
+            <bucket>5.6100000000000003</bucket>
+            <bucket>5.5999999999999996</bucket>
+            <bucket>5.5899999999999999</bucket>
+            <bucket>5.5600000000000005</bucket>
+            <bucket>5.5499999999999998</bucket>
+            <bucket>5.54</bucket>
+            <bucket>5.5300000000000002</bucket>
+            <bucket>5.5099999999999998</bucket>
+            <bucket>5.4699999999999998</bucket>
+            <bucket>5.46</bucket>
+            <bucket>5.4500000000000002</bucket>
+            <bucket>5.4199999999999999</bucket>
+            <bucket>5.4100000000000001</bucket>
+            <bucket>5.3899999999999997</bucket>
+            <bucket>5.3600000000000003</bucket>
+            <bucket>5.3499999999999996</bucket>
+            <bucket>5.3399999999999999</bucket>
+            <bucket>5.3300000000000001</bucket>
+            <bucket>5.3099999999999996</bucket>
+            <bucket>5.29</bucket>
+            <bucket>5.2800000000000002</bucket>
+            <bucket>5.2699999999999996</bucket>
+            <bucket>5.2599999999999998</bucket>
+            <bucket>5.2400000000000002</bucket>
+            <bucket>5.2300000000000004</bucket>
+            <bucket>5.2199999999999998</bucket>
+            <bucket>5.21</bucket>
+            <bucket>5.2000000000000002</bucket>
+            <bucket>5.1900000000000004</bucket>
+            <bucket>5.1600000000000001</bucket>
+            <bucket>5.1500000000000004</bucket>
+            <bucket>5.1399999999999997</bucket>
+            <bucket>5.1299999999999999</bucket>
+            <bucket>5.1200000000000001</bucket>
+            <bucket>5.0999999999999996</bucket>
+            <bucket>5.0899999999999999</bucket>
+            <bucket>5.0800000000000001</bucket>
+            <bucket>5.0700000000000003</bucket>
+            <bucket>5.04</bucket>
+            <bucket>5.0300000000000002</bucket>
+            <bucket>5.0199999999999996</bucket>
+            <bucket>5.0099999999999998</bucket>
+            <bucket>5.0</bucket>
+            <bucket>45.710000000000001</bucket>
+            <bucket>430.51999999999998</bucket>
+            <bucket>43.899999999999999</bucket>
+            <bucket>42.5</bucket>
+            <bucket>415.56</bucket>
+            <bucket>41.409999999999997</bucket>
+            <bucket>40.409999999999997</bucket>
+            <bucket>4.9900000000000002</bucket>
+            <bucket>4.9800000000000004</bucket>
+            <bucket>4.9699999999999998</bucket>
+            <bucket>4.9399999999999995</bucket>
+            <bucket>4.9299999999999997</bucket>
+            <bucket>4.9199999999999999</bucket>
+            <bucket>4.9100000000000001</bucket>
+            <bucket>4.9000000000000004</bucket>
+            <bucket>4.8899999999999997</bucket>
+            <bucket>4.8799999999999999</bucket>
+            <bucket>4.8700000000000001</bucket>
+            <bucket>4.8600000000000003</bucket>
+            <bucket>4.8399999999999999</bucket>
+            <bucket>4.8300000000000001</bucket>
+            <bucket>4.8100000000000005</bucket>
+            <bucket>4.7999999999999998</bucket>
+            <bucket>4.7699999999999996</bucket>
+            <bucket>4.7599999999999998</bucket>
+            <bucket>4.75</bucket>
+            <bucket>4.7300000000000004</bucket>
+            <bucket>4.7199999999999998</bucket>
+            <bucket>4.71</bucket>
+            <bucket>4.7000000000000002</bucket>
+            <bucket>4.6799999999999997</bucket>
+            <bucket>4.6500000000000004</bucket>
+            <bucket>4.6399999999999997</bucket>
+            <bucket>4.6299999999999999</bucket>
+            <bucket>4.6200000000000001</bucket>
+            <bucket>4.6100000000000003</bucket>
+            <bucket>4.5899999999999999</bucket>
+            <bucket>4.5800000000000001</bucket>
+            <bucket>4.5700000000000003</bucket>
+            <bucket>4.5600000000000005</bucket>
+            <bucket>4.5499999999999998</bucket>
+            <bucket>4.54</bucket>
+            <bucket>4.5300000000000002</bucket>
+            <bucket>4.5199999999999996</bucket>
+            <bucket>4.5099999999999998</bucket>
+            <bucket>4.5</bucket>
+            <bucket>4.4900000000000002</bucket>
+            <bucket>4.4699999999999998</bucket>
+            <bucket>4.46</bucket>
+            <bucket>4.4500000000000002</bucket>
+            <bucket>4.4400000000000004</bucket>
+            <bucket>4.4299999999999997</bucket>
+            <bucket>4.4199999999999999</bucket>
+            <bucket>4.4100000000000001</bucket>
+            <bucket>4.4000000000000004</bucket>
+            <bucket>4.3899999999999997</bucket>
+            <bucket>4.3799999999999999</bucket>
+            <bucket>4.3700000000000001</bucket>
+            <bucket>4.3499999999999996</bucket>
+            <bucket>4.3399999999999999</bucket>
+            <bucket>4.3300000000000001</bucket>
+            <bucket>4.3099999999999996</bucket>
+            <bucket>4.2999999999999998</bucket>
+            <bucket>4.29</bucket>
+            <bucket>4.2800000000000002</bucket>
+            <bucket>4.2699999999999996</bucket>
+            <bucket>4.2599999999999998</bucket>
+            <bucket>4.25</bucket>
+            <bucket>4.2300000000000004</bucket>
+            <bucket>4.2199999999999998</bucket>
+            <bucket>4.21</bucket>
+            <bucket>4.2000000000000002</bucket>
+            <bucket>4.1900000000000004</bucket>
+            <bucket>4.1799999999999997</bucket>
+            <bucket>4.1699999999999999</bucket>
+            <bucket>4.1600000000000001</bucket>
+            <bucket>4.1500000000000004</bucket>
+            <bucket>4.1299999999999999</bucket>
+            <bucket>4.1200000000000001</bucket>
+            <bucket>4.1100000000000003</bucket>
+            <bucket>4.0999999999999996</bucket>
+            <bucket>4.0899999999999999</bucket>
+            <bucket>4.0800000000000001</bucket>
+            <bucket>4.0700000000000003</bucket>
+            <bucket>4.0599999999999996</bucket>
+            <bucket>4.0499999999999998</bucket>
+            <bucket>4.04</bucket>
+            <bucket>4.0300000000000002</bucket>
+            <bucket>4.0199999999999996</bucket>
+            <bucket>4.0099999999999998</bucket>
+            <bucket>4.0</bucket>
+            <bucket>39.600000000000001</bucket>
+            <bucket>38.520000000000003</bucket>
+            <bucket>38.200000000000003</bucket>
+            <bucket>37.979999999999997</bucket>
+            <bucket>35.859999999999999</bucket>
+            <bucket>341.06</bucket>
+            <bucket>32.060000000000002</bucket>
+            <bucket>31.379999999999999</bucket>
+            <bucket>30.02</bucket>
+            <bucket>3.96</bucket>
+            <bucket>3.9500000000000002</bucket>
+            <bucket>3.9399999999999999</bucket>
+            <bucket>3.9300000000000002</bucket>
+            <bucket>3.9199999999999999</bucket>
+            <bucket>3.9100000000000001</bucket>
+            <bucket>3.8900000000000001</bucket>
+            <bucket>3.8799999999999999</bucket>
+            <bucket>3.8700000000000001</bucket>
+            <bucket>3.8599999999999999</bucket>
+            <bucket>3.8500000000000001</bucket>
+            <bucket>3.8399999999999999</bucket>
+            <bucket>3.8300000000000001</bucket>
+            <bucket>3.8199999999999998</bucket>
+            <bucket>3.8100000000000001</bucket>
+            <bucket>3.7999999999999998</bucket>
+            <bucket>3.79</bucket>
+            <bucket>3.77</bucket>
+            <bucket>3.7599999999999998</bucket>
+            <bucket>3.75</bucket>
+            <bucket>3.7400000000000002</bucket>
+            <bucket>3.73</bucket>
+            <bucket>3.7199999999999998</bucket>
+            <bucket>3.71</bucket>
+            <bucket>3.7000000000000002</bucket>
+            <bucket>3.6899999999999999</bucket>
+            <bucket>3.6800000000000002</bucket>
+            <bucket>3.6600000000000001</bucket>
+            <bucket>3.6400000000000001</bucket>
+            <bucket>3.6299999999999999</bucket>
+            <bucket>3.6000000000000001</bucket>
+            <bucket>3.5899999999999999</bucket>
+            <bucket>3.5800000000000001</bucket>
+            <bucket>3.5699999999999998</bucket>
+            <bucket>3.5600000000000001</bucket>
+            <bucket>3.5499999999999998</bucket>
+            <bucket>3.54</bucket>
+            <bucket>3.5300000000000002</bucket>
+            <bucket>3.52</bucket>
+            <bucket>3.5099999999999998</bucket>
+            <bucket>3.5</bucket>
+            <bucket>3.48</bucket>
+            <bucket>3.4699999999999998</bucket>
+            <bucket>3.46</bucket>
+            <bucket>3.4500000000000002</bucket>
+            <bucket>3.4399999999999999</bucket>
+            <bucket>3.4300000000000002</bucket>
+            <bucket>3.4199999999999999</bucket>
+            <bucket>3.3999999999999999</bucket>
+            <bucket>3.3900000000000001</bucket>
+            <bucket>3.3700000000000001</bucket>
+            <bucket>3.3599999999999999</bucket>
+            <bucket>3.3500000000000001</bucket>
+            <bucket>3.3399999999999999</bucket>
+            <bucket>3.3300000000000001</bucket>
+            <bucket>3.3199999999999998</bucket>
+            <bucket>3.3100000000000001</bucket>
+            <bucket>3.2999999999999998</bucket>
+            <bucket>3.29</bucket>
+            <bucket>3.2800000000000002</bucket>
+            <bucket>3.27</bucket>
+            <bucket>3.2599999999999998</bucket>
+            <bucket>3.25</bucket>
+            <bucket>3.2400000000000002</bucket>
+            <bucket>3.23</bucket>
+            <bucket>3.2200000000000002</bucket>
+            <bucket>3.21</bucket>
+            <bucket>3.2000000000000002</bucket>
+            <bucket>3.1899999999999999</bucket>
+            <bucket>3.1800000000000002</bucket>
+            <bucket>3.1699999999999999</bucket>
+            <bucket>3.1600000000000001</bucket>
+            <bucket>3.1499999999999999</bucket>
+            <bucket>3.1400000000000001</bucket>
+            <bucket>3.1299999999999999</bucket>
+            <bucket>3.1200000000000001</bucket>
+            <bucket>3.1000000000000001</bucket>
+            <bucket>3.0899999999999999</bucket>
+            <bucket>3.0800000000000001</bucket>
+            <bucket>3.0699999999999998</bucket>
+            <bucket>3.0600000000000001</bucket>
+            <bucket>3.0499999999999998</bucket>
+            <bucket>3.04</bucket>
+            <bucket>3.0299999999999998</bucket>
+            <bucket>3.02</bucket>
+            <bucket>3.0099999999999998</bucket>
+            <bucket>3.0</bucket>
+            <bucket>29.59</bucket>
+            <bucket>29.530000000000001</bucket>
+            <bucket>29.420000000000002</bucket>
+            <bucket>28.760000000000002</bucket>
+            <bucket>28.27</bucket>
+            <bucket>28.239999999999998</bucket>
+            <bucket>27.719999999999999</bucket>
+            <bucket>27.559999999999999</bucket>
+            <bucket>26.699999999999999</bucket>
+            <bucket>26.469999999999999</bucket>
+            <bucket>26.18</bucket>
+            <bucket>25.890000000000001</bucket>
+            <bucket>25.370000000000001</bucket>
+            <bucket>25.030000000000001</bucket>
+            <bucket>24.75</bucket>
+            <bucket>24.600000000000001</bucket>
+            <bucket>24.489999999999998</bucket>
+            <bucket>24.48</bucket>
+            <bucket>24.0</bucket>
+            <bucket>23.940000000000001</bucket>
+            <bucket>23.890000000000001</bucket>
+            <bucket>23.789999999999999</bucket>
+            <bucket>23.66</bucket>
+            <bucket>23.359999999999999</bucket>
+            <bucket>22.969999999999999</bucket>
+            <bucket>21.82</bucket>
+            <bucket>21.52</bucket>
+            <bucket>20.879999999999999</bucket>
+            <bucket>20.850000000000001</bucket>
+            <bucket>20.800000000000001</bucket>
+            <bucket>20.66</bucket>
+            <bucket>20.32</bucket>
+            <bucket>2.9900000000000002</bucket>
+            <bucket>2.98</bucket>
+            <bucket>2.9699999999999998</bucket>
+            <bucket>2.96</bucket>
+            <bucket>2.9500000000000002</bucket>
+            <bucket>2.9399999999999999</bucket>
+            <bucket>2.9300000000000002</bucket>
+            <bucket>2.9100000000000001</bucket>
+            <bucket>2.8999999999999999</bucket>
+            <bucket>2.8799999999999999</bucket>
+            <bucket>2.8700000000000001</bucket>
+            <bucket>2.8599999999999999</bucket>
+            <bucket>2.8500000000000001</bucket>
+            <bucket>2.8399999999999999</bucket>
+            <bucket>2.8300000000000001</bucket>
+            <bucket>2.8199999999999998</bucket>
+            <bucket>2.8100000000000001</bucket>
+            <bucket>2.79</bucket>
+            <bucket>2.7800000000000002</bucket>
+            <bucket>2.77</bucket>
+            <bucket>2.7599999999999998</bucket>
+            <bucket>2.75</bucket>
+            <bucket>2.7400000000000002</bucket>
+            <bucket>2.73</bucket>
+            <bucket>2.7199999999999998</bucket>
+            <bucket>2.71</bucket>
+            <bucket>2.7000000000000002</bucket>
+            <bucket>2.6899999999999999</bucket>
+            <bucket>2.6699999999999999</bucket>
+            <bucket>2.6600000000000001</bucket>
+            <bucket>2.6499999999999999</bucket>
+            <bucket>2.6400000000000001</bucket>
+            <bucket>2.6299999999999999</bucket>
+            <bucket>2.6200000000000001</bucket>
+            <bucket>2.6099999999999999</bucket>
+            <bucket>2.6000000000000001</bucket>
+            <bucket>2.5899999999999999</bucket>
+            <bucket>2.5800000000000001</bucket>
+            <bucket>2.5699999999999998</bucket>
+            <bucket>2.5600000000000001</bucket>
+            <bucket>2.5499999999999998</bucket>
+            <bucket>2.54</bucket>
+            <bucket>2.5300000000000002</bucket>
+            <bucket>2.52</bucket>
+            <bucket>2.5099999999999998</bucket>
+            <bucket>2.5</bucket>
+            <bucket>2.4900000000000002</bucket>
+            <bucket>2.48</bucket>
+            <bucket>2.4699999999999998</bucket>
+            <bucket>2.46</bucket>
+            <bucket>2.4500000000000002</bucket>
+            <bucket>2.4399999999999999</bucket>
+            <bucket>2.4300000000000002</bucket>
+            <bucket>2.4199999999999999</bucket>
+            <bucket>2.4100000000000001</bucket>
+            <bucket>2.3999999999999999</bucket>
+            <bucket>2.3900000000000001</bucket>
+            <bucket>2.3799999999999999</bucket>
+            <bucket>2.3700000000000001</bucket>
+            <bucket>2.3599999999999999</bucket>
+            <bucket>2.3500000000000001</bucket>
+            <bucket>2.3399999999999999</bucket>
+            <bucket>2.3300000000000001</bucket>
+            <bucket>2.3199999999999998</bucket>
+            <bucket>2.3100000000000001</bucket>
+            <bucket>2.2999999999999998</bucket>
+            <bucket>2.29</bucket>
+            <bucket>2.2800000000000002</bucket>
+            <bucket>2.27</bucket>
+            <bucket>2.2599999999999998</bucket>
+            <bucket>2.25</bucket>
+            <bucket>2.2400000000000002</bucket>
+            <bucket>2.23</bucket>
+            <bucket>2.2200000000000002</bucket>
+            <bucket>2.21</bucket>
+            <bucket>2.2000000000000002</bucket>
+            <bucket>2.1899999999999999</bucket>
+            <bucket>2.1800000000000002</bucket>
+            <bucket>2.1699999999999999</bucket>
+            <bucket>2.1600000000000001</bucket>
+            <bucket>2.1499999999999999</bucket>
+            <bucket>2.1400000000000001</bucket>
+            <bucket>2.1299999999999999</bucket>
+            <bucket>2.1200000000000001</bucket>
+            <bucket>2.1099999999999999</bucket>
+            <bucket>2.1000000000000001</bucket>
+            <bucket>2.0899999999999999</bucket>
+            <bucket>2.0800000000000001</bucket>
+            <bucket>2.0699999999999998</bucket>
+            <bucket>2.0600000000000001</bucket>
+            <bucket>2.0499999999999998</bucket>
+            <bucket>2.04</bucket>
+            <bucket>2.0299999999999998</bucket>
+            <bucket>2.02</bucket>
+            <bucket>2.0099999999999998</bucket>
+            <bucket>2.0</bucket>
+            <bucket>19.66</bucket>
+            <bucket>19.359999999999999</bucket>
+            <bucket>19.23</bucket>
+            <bucket>19.100000000000001</bucket>
+            <bucket>18.93</bucket>
+            <bucket>18.809999999999999</bucket>
+            <bucket>18.739999999999998</bucket>
+            <bucket>18.68</bucket>
+            <bucket>18.59</bucket>
+            <bucket>18.5</bucket>
+            <bucket>18.41</bucket>
+            <bucket>18.210000000000001</bucket>
+            <bucket>17.940000000000001</bucket>
+            <bucket>17.780000000000001</bucket>
+            <bucket>17.73</bucket>
+            <bucket>17.449999999999999</bucket>
+            <bucket>17.18</bucket>
+            <bucket>163.58000000000001</bucket>
+            <bucket>16.59</bucket>
+            <bucket>16.129999999999999</bucket>
+            <bucket>154.49000000000001</bucket>
+            <bucket>15.83</bucket>
+            <bucket>15.789999999999999</bucket>
+            <bucket>15.6</bucket>
+            <bucket>15.57</bucket>
+            <bucket>15.550000000000001</bucket>
+            <bucket>15.43</bucket>
+            <bucket>15.390000000000001</bucket>
+            <bucket>15.27</bucket>
+            <bucket>15.17</bucket>
+            <bucket>14.94</bucket>
+            <bucket>14.9</bucket>
+            <bucket>14.859999999999999</bucket>
+            <bucket>14.74</bucket>
+            <bucket>14.68</bucket>
+            <bucket>14.470000000000001</bucket>
+            <bucket>14.24</bucket>
+            <bucket>14.23</bucket>
+            <bucket>14.19</bucket>
+            <bucket>14.18</bucket>
+            <bucket>14.1</bucket>
+            <bucket>14.050000000000001</bucket>
+            <bucket>13.91</bucket>
+            <bucket>13.81</bucket>
+            <bucket>13.66</bucket>
+            <bucket>13.59</bucket>
+            <bucket>13.52</bucket>
+            <bucket>13.470000000000001</bucket>
+            <bucket>13.44</bucket>
+            <bucket>13.41</bucket>
+            <bucket>13.32</bucket>
+            <bucket>13.27</bucket>
+            <bucket>13.23</bucket>
+            <bucket>13.0</bucket>
+            <bucket>12.869999999999999</bucket>
+            <bucket>12.85</bucket>
+            <bucket>12.81</bucket>
+            <bucket>12.800000000000001</bucket>
+            <bucket>12.75</bucket>
+            <bucket>12.69</bucket>
+            <bucket>12.58</bucket>
+            <bucket>12.460000000000001</bucket>
+            <bucket>12.390000000000001</bucket>
+            <bucket>12.35</bucket>
+            <bucket>12.34</bucket>
+            <bucket>12.33</bucket>
+            <bucket>12.32</bucket>
+            <bucket>12.31</bucket>
+            <bucket>12.02</bucket>
+            <bucket>119.28</bucket>
+            <bucket>114.31</bucket>
+            <bucket>110.04000000000001</bucket>
+            <bucket>11.93</bucket>
+            <bucket>11.85</bucket>
+            <bucket>11.83</bucket>
+            <bucket>11.75</bucket>
+            <bucket>11.73</bucket>
+            <bucket>11.710000000000001</bucket>
+            <bucket>11.68</bucket>
+            <bucket>11.58</bucket>
+            <bucket>11.460000000000001</bucket>
+            <bucket>11.4</bucket>
+            <bucket>11.390000000000001</bucket>
+            <bucket>11.27</bucket>
+            <bucket>11.23</bucket>
+            <bucket>11.220000000000001</bucket>
+            <bucket>11.15</bucket>
+            <bucket>11.140000000000001</bucket>
+            <bucket>11.119999999999999</bucket>
+            <bucket>11.050000000000001</bucket>
+            <bucket>11.039999999999999</bucket>
+            <bucket>11.02</bucket>
+            <bucket>11.0</bucket>
+            <bucket>101.43000000000001</bucket>
+            <bucket>100.76000000000001</bucket>
+            <bucket>10.9</bucket>
+            <bucket>10.880000000000001</bucket>
+            <bucket>10.85</bucket>
+            <bucket>10.84</bucket>
+            <bucket>10.82</bucket>
+            <bucket>10.81</bucket>
+            <bucket>10.800000000000001</bucket>
+            <bucket>10.76</bucket>
+            <bucket>10.75</bucket>
+            <bucket>10.67</bucket>
+            <bucket>10.630000000000001</bucket>
+            <bucket>10.58</bucket>
+            <bucket>10.56</bucket>
+            <bucket>10.5</bucket>
+            <bucket>10.44</bucket>
+            <bucket>10.34</bucket>
+            <bucket>10.279999999999999</bucket>
+            <bucket>10.26</bucket>
+            <bucket>10.119999999999999</bucket>
+            <bucket>10.08</bucket>
+            <bucket>1.99</bucket>
+            <bucket>1.98</bucket>
+            <bucket>1.97</bucket>
+            <bucket>1.96</bucket>
+            <bucket>1.95</bucket>
+            <bucket>1.9399999999999999</bucket>
+            <bucket>1.9300000000000002</bucket>
+            <bucket>1.9199999999999999</bucket>
+            <bucket>1.9100000000000001</bucket>
+            <bucket>1.8999999999999999</bucket>
+            <bucket>1.8900000000000001</bucket>
+            <bucket>1.8799999999999999</bucket>
+            <bucket>1.8700000000000001</bucket>
+            <bucket>1.8599999999999999</bucket>
+            <bucket>1.8500000000000001</bucket>
+            <bucket>1.8399999999999999</bucket>
+            <bucket>1.8300000000000001</bucket>
+            <bucket>1.8199999999999998</bucket>
+            <bucket>1.8100000000000001</bucket>
+            <bucket>1.8</bucket>
+            <bucket>1.79</bucket>
+            <bucket>1.78</bucket>
+            <bucket>1.77</bucket>
+            <bucket>1.76</bucket>
+            <bucket>1.75</bucket>
+            <bucket>1.74</bucket>
+            <bucket>1.73</bucket>
+            <bucket>1.72</bucket>
+            <bucket>1.71</bucket>
+            <bucket>1.7</bucket>
+            <bucket>1.6899999999999999</bucket>
+            <bucket>1.6800000000000002</bucket>
+            <bucket>1.6699999999999999</bucket>
+            <bucket>1.6600000000000001</bucket>
+            <bucket>1.6499999999999999</bucket>
+            <bucket>1.6400000000000001</bucket>
+            <bucket>1.6299999999999999</bucket>
+            <bucket>1.6200000000000001</bucket>
+            <bucket>1.6099999999999999</bucket>
+            <bucket>1.6000000000000001</bucket>
+            <bucket>1.5899999999999999</bucket>
+            <bucket>1.5800000000000001</bucket>
+            <bucket>1.5699999999999998</bucket>
+            <bucket>1.5600000000000001</bucket>
+            <bucket>1.55</bucket>
+            <bucket>1.54</bucket>
+            <bucket>1.53</bucket>
+            <bucket>1.52</bucket>
+            <bucket>1.51</bucket>
+            <bucket>1.5</bucket>
+            <bucket>1.49</bucket>
+            <bucket>1.48</bucket>
+            <bucket>1.47</bucket>
+            <bucket>1.46</bucket>
+            <bucket>1.45</bucket>
+            <bucket>1.4399999999999999</bucket>
+            <bucket>1.4299999999999999</bucket>
+            <bucket>1.4199999999999999</bucket>
+            <bucket>1.4099999999999999</bucket>
+            <bucket>1.3999999999999999</bucket>
+            <bucket>1.3900000000000001</bucket>
+            <bucket>1.3799999999999999</bucket>
+            <bucket>1.3700000000000001</bucket>
+            <bucket>1.3599999999999999</bucket>
+            <bucket>1.3500000000000001</bucket>
+            <bucket>1.3400000000000001</bucket>
+            <bucket>1.3300000000000001</bucket>
+            <bucket>1.3200000000000001</bucket>
+            <bucket>1.3100000000000001</bucket>
+            <bucket>1.3</bucket>
+            <bucket>1.29</bucket>
+            <bucket>1.28</bucket>
+            <bucket>1.27</bucket>
+            <bucket>1.26</bucket>
+            <bucket>1.25</bucket>
+            <bucket>1.24</bucket>
+            <bucket>1.23</bucket>
+            <bucket>1.22</bucket>
+            <bucket>1.21</bucket>
+            <bucket>1.2</bucket>
+            <bucket>1.1899999999999999</bucket>
+            <bucket>1.1799999999999999</bucket>
+            <bucket>1.1699999999999999</bucket>
+            <bucket>1.1599999999999999</bucket>
+            <bucket>1.1499999999999999</bucket>
+            <bucket>1.1400000000000001</bucket>
+            <bucket>1.1299999999999999</bucket>
+            <bucket>1.1200000000000001</bucket>
+            <bucket>1.1100000000000001</bucket>
+            <bucket>1.1000000000000001</bucket>
+            <bucket>1.0900000000000001</bucket>
+            <bucket>1.0800000000000001</bucket>
+            <bucket>1.0700000000000001</bucket>
+            <bucket>1.0600000000000001</bucket>
+            <bucket>1.05</bucket>
+            <bucket>1.04</bucket>
+            <bucket>1.03</bucket>
+            <bucket>1.02</bucket>
+            <bucket>1.01</bucket>
+            <bucket>1.0</bucket>
+            <bucket>0.98999999999999999</bucket>
+            <bucket>0.97999999999999998</bucket>
+            <bucket>0.96999999999999997</bucket>
+            <bucket>0.95999999999999996</bucket>
+            <bucket>0.94999999999999996</bucket>
+            <bucket>0.93999999999999995</bucket>
+            <bucket>0.93000000000000005</bucket>
+            <bucket>0.92000000000000004</bucket>
+            <bucket>0.91000000000000003</bucket>
+            <bucket>0.90000000000000002</bucket>
+            <bucket>0.89000000000000001</bucket>
+            <bucket>0.88</bucket>
+            <bucket>0.87</bucket>
+            <bucket>0.85999999999999999</bucket>
+            <bucket>0.84999999999999998</bucket>
+            <bucket>0.83999999999999997</bucket>
+            <bucket>0.82999999999999996</bucket>
+            <bucket>0.81999999999999995</bucket>
+            <bucket>0.81000000000000005</bucket>
+            <bucket>0.80000000000000004</bucket>
+            <bucket>0.79000000000000004</bucket>
+            <bucket>0.78000000000000003</bucket>
+            <bucket>0.77000000000000002</bucket>
+            <bucket>0.76000000000000001</bucket>
+            <bucket>0.75</bucket>
+            <bucket>0.73999999999999999</bucket>
+            <bucket>0.72999999999999998</bucket>
+            <bucket>0.71999999999999997</bucket>
+            <bucket>0.70999999999999996</bucket>
+            <bucket>0.69999999999999996</bucket>
+            <bucket>0.68999999999999995</bucket>
+            <bucket>0.68000000000000005</bucket>
+            <bucket>0.67000000000000004</bucket>
+            <bucket>0.66000000000000003</bucket>
+            <bucket>0.65000000000000002</bucket>
+            <bucket>0.64000000000000001</bucket>
+            <bucket>0.63</bucket>
+            <bucket>0.62</bucket>
+            <bucket>0.60999999999999999</bucket>
+            <bucket>0.59999999999999998</bucket>
+            <bucket>0.58999999999999997</bucket>
+            <bucket>0.57999999999999996</bucket>
+            <bucket>0.56999999999999995</bucket>
+            <bucket>0.56000000000000005</bucket>
+            <bucket>0.55000000000000004</bucket>
+            <bucket>0.54000000000000004</bucket>
+            <bucket>0.53000000000000003</bucket>
+            <bucket>0.52000000000000002</bucket>
+            <bucket>0.51000000000000001</bucket>
+            <bucket>0.5</bucket>
+            <bucket>0.48999999999999999</bucket>
+            <bucket>0.47999999999999998</bucket>
+            <bucket>0.46999999999999997</bucket>
+            <bucket>0.46000000000000002</bucket>
+            <bucket>0.45000000000000001</bucket>
+            <bucket>0.44</bucket>
+            <bucket>0.42999999999999999</bucket>
+            <bucket>0.41999999999999998</bucket>
+            <bucket>0.40999999999999998</bucket>
+            <bucket>0.40000000000000002</bucket>
+            <bucket>0.39000000000000001</bucket>
+            <bucket>0.38</bucket>
+            <bucket>0.37</bucket>
+            <bucket>0.35999999999999999</bucket>
+            <bucket>0.34999999999999998</bucket>
+            <bucket>0.34000000000000002</bucket>
+            <bucket>0.33000000000000002</bucket>
+            <bucket>0.32000000000000001</bucket>
+            <bucket>0.31</bucket>
+            <bucket>0.29999999999999999</bucket>
+            <bucket>0.28999999999999998</bucket>
+            <bucket>0.28000000000000003</bucket>
+            <bucket>0.27000000000000002</bucket>
+            <bucket>0.26000000000000001</bucket>
+            <bucket>0.25</bucket>
+            <bucket>0.23999999999999999</bucket>
+            <bucket>0.23000000000000001</bucket>
+            <bucket>0.22</bucket>
+            <bucket>0.20999999999999999</bucket>
+            <bucket>0.20000000000000001</bucket>
+            <bucket>0.19</bucket>
+            <bucket>0.17999999999999999</bucket>
+            <bucket>0.17000000000000001</bucket>
+            <bucket>0.16</bucket>
+            <bucket>0.14999999999999999</bucket>
+            <bucket>0.14000000000000001</bucket>
+            <bucket>0.13</bucket>
+            <bucket>0.12</bucket>
+            <bucket>0.11</bucket>
+            <bucket>0.10000000000000001</bucket>
+            <bucket>0.089999999999999997</bucket>
+            <bucket>0.080000000000000002</bucket>
+            <bucket>0.070000000000000007</bucket>
+            <bucket>0.059999999999999998</bucket>
+            <bucket>0.050000000000000003</bucket>
+            <bucket>0.040000000000000001</bucket>
+            <bucket>0.029999999999999999</bucket>
+            <bucket>0.02</bucket>
+            <bucket>0.01</bucket>
+            <bucket>0.0</bucket>
+            <bucket>-1.0</bucket>
+            <bucket>-0.98999999999999999</bucket>
+            <bucket>-0.97999999999999998</bucket>
+            <bucket>-0.96999999999999997</bucket>
+            <bucket>-0.95999999999999996</bucket>
+            <bucket>-0.94999999999999996</bucket>
+            <bucket>-0.93999999999999995</bucket>
+            <bucket>-0.93000000000000005</bucket>
+            <bucket>-0.92000000000000004</bucket>
+            <bucket>-0.91000000000000003</bucket>
+            <bucket>-0.90000000000000002</bucket>
+            <bucket>-0.89000000000000001</bucket>
+            <bucket>-0.88</bucket>
+            <bucket>-0.87</bucket>
+            <bucket>-0.85999999999999999</bucket>
+            <bucket>-0.84999999999999998</bucket>
+            <bucket>-0.83999999999999997</bucket>
+            <bucket>-0.82999999999999996</bucket>
+            <bucket>-0.81999999999999995</bucket>
+            <bucket>-0.81000000000000005</bucket>
+            <bucket>-0.80000000000000004</bucket>
+            <bucket>-0.79000000000000004</bucket>
+            <bucket>-0.78000000000000003</bucket>
+            <bucket>-0.77000000000000002</bucket>
+            <bucket>-0.76000000000000001</bucket>
+            <bucket>-0.75</bucket>
+            <bucket>-0.73999999999999999</bucket>
+            <bucket>-0.72999999999999998</bucket>
+            <bucket>-0.71999999999999997</bucket>
+            <bucket>-0.70999999999999996</bucket>
+            <bucket>-0.69999999999999996</bucket>
+            <bucket>-0.68999999999999995</bucket>
+            <bucket>-0.68000000000000005</bucket>
+            <bucket>-0.67000000000000004</bucket>
+            <bucket>-0.66000000000000003</bucket>
+            <bucket>-0.65000000000000002</bucket>
+            <bucket>-0.64000000000000001</bucket>
+            <bucket>-0.63</bucket>
+            <bucket>-0.62</bucket>
+            <bucket>-0.60999999999999999</bucket>
+            <bucket>-0.59999999999999998</bucket>
+            <bucket>-0.58999999999999997</bucket>
+            <bucket>-0.57999999999999996</bucket>
+            <bucket>-0.56999999999999995</bucket>
+            <bucket>-0.56000000000000005</bucket>
+            <bucket>-0.55000000000000004</bucket>
+            <bucket>-0.54000000000000004</bucket>
+            <bucket>-0.53000000000000003</bucket>
+            <bucket>-0.52000000000000002</bucket>
+            <bucket>-0.51000000000000001</bucket>
+            <bucket>-0.5</bucket>
+            <bucket>-0.48999999999999999</bucket>
+            <bucket>-0.47999999999999998</bucket>
+            <bucket>-0.46999999999999997</bucket>
+            <bucket>-0.46000000000000002</bucket>
+            <bucket>-0.45000000000000001</bucket>
+            <bucket>-0.44</bucket>
+            <bucket>-0.42999999999999999</bucket>
+            <bucket>-0.41999999999999998</bucket>
+            <bucket>-0.40999999999999998</bucket>
+            <bucket>-0.40000000000000002</bucket>
+            <bucket>-0.39000000000000001</bucket>
+            <bucket>-0.38</bucket>
+            <bucket>-0.37</bucket>
+            <bucket>-0.35999999999999999</bucket>
+            <bucket>-0.34999999999999998</bucket>
+            <bucket>-0.34000000000000002</bucket>
+            <bucket>-0.33000000000000002</bucket>
+            <bucket>-0.32000000000000001</bucket>
+            <bucket>-0.31</bucket>
+            <bucket>-0.29999999999999999</bucket>
+            <bucket>-0.28999999999999998</bucket>
+            <bucket>-0.28000000000000003</bucket>
+            <bucket>-0.27000000000000002</bucket>
+            <bucket>-0.26000000000000001</bucket>
+            <bucket>-0.25</bucket>
+            <bucket>-0.23999999999999999</bucket>
+            <bucket>-0.23000000000000001</bucket>
+            <bucket>-0.22</bucket>
+            <bucket>-0.20999999999999999</bucket>
+            <bucket>-0.20000000000000001</bucket>
+            <bucket>-0.19</bucket>
+            <bucket>-0.17999999999999999</bucket>
+            <bucket>-0.17000000000000001</bucket>
+            <bucket>-0.16</bucket>
+            <bucket>-0.14999999999999999</bucket>
+            <bucket>-0.14000000000000001</bucket>
+            <bucket>-0.13</bucket>
+            <bucket>-0.12</bucket>
+            <bucket>-0.11</bucket>
+            <bucket>-0.10000000000000001</bucket>
+            <bucket>-0.089999999999999997</bucket>
+            <bucket>-0.080000000000000002</bucket>
+            <bucket>-0.070000000000000007</bucket>
+            <bucket>-0.059999999999999998</bucket>
+            <bucket>-0.050000000000000003</bucket>
+            <bucket>-0.040000000000000001</bucket>
+            <bucket>-0.029999999999999999</bucket>
+            <bucket>-0.02</bucket>
+            <bucket>-0.01</bucket>
+          </dictionary>
+        </manual-sort>
+      </default-sorts>
+      <object-graph>
+        <objects>
+          <object caption='cleaned_budgets.csv' id='cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F'>
+            <properties context=''>
+              <relation connection='textscan.1gnv1zl10faww61baehcp0rehyve' name='cleaned_budgets.csv' table='[cleaned_budgets#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='id' ordinal='0' />
+                  <column datatype='date' name='release_date' ordinal='1' />
+                  <column datatype='string' name='movie' ordinal='2' />
+                  <column datatype='integer' name='production_budget' ordinal='3' />
+                  <column datatype='integer' name='domestic_gross' ordinal='4' />
+                  <column datatype='integer' name='worldwide_gross' ordinal='5' />
+                  <column datatype='real' name='return_ratio' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F' table='[Extract].[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]' type='table' />
+            </properties>
+          </object>
+          <object caption='genre_roi.csv' id='genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD'>
+            <properties context=''>
+              <relation connection='textscan.1gnv1zl10faww61baehcp0rehyve' name='genre_roi.csv' table='[genre_roi#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='string' name='genre' ordinal='1' />
+                  <column datatype='real' name='average_roi' ordinal='2' />
+                  <column datatype='integer' name='count' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD' table='[Extract].[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='1' />
+              <expression op='1' />
+            </expression>
+            <first-end-point object-id='genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD' />
+            <second-end-point object-id='cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Genre ROI'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Average Return on Investment per Genre</run>
+            <run fontalignment='1'>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='genre_roi' name='federated.15y1ybh1srtyhr0zrf6t11709fgc' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15y1ybh1srtyhr0zrf6t11709fgc'>
+            <column-instance column='[average_roi]' derivation='Attribute' name='[attr:average_roi:qk]' pivot='key' type='quantitative' />
+            <column caption='Average Roi' datatype='real' name='[average_roi]' role='measure' type='quantitative' />
+            <column caption='Genre' datatype='string' name='[genre]' role='dimension' type='nominal' />
+            <column-instance column='[genre]' derivation='None' name='[none:genre:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:genre:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Thriller&quot;</bucket>
+              <bucket>&quot;Horror&quot;</bucket>
+              <bucket>&quot;Biography&quot;</bucket>
+              <bucket>&quot;Sci-Fi&quot;</bucket>
+              <bucket>&quot;History&quot;</bucket>
+              <bucket>&quot;Romance&quot;</bucket>
+              <bucket>&quot;Family&quot;</bucket>
+              <bucket>&quot;Drama&quot;</bucket>
+              <bucket>&quot;Comedy&quot;</bucket>
+              <bucket>&quot;Action&quot;</bucket>
+              <bucket>&quot;Crime&quot;</bucket>
+              <bucket>&quot;Adventure&quot;</bucket>
+              <bucket>&quot;Mystery&quot;</bucket>
+              <bucket>&quot;Documentary&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='font-size' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:average_roi:qk]' value='11' />
+            <format attr='font-weight' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:average_roi:qk]' value='bold' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:average_roi:qk]' value='11' />
+            <format attr='font-weight' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:average_roi:qk]' value='bold' />
+            <format attr='font-size' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:genre:nk]' value='11' />
+            <format attr='font-weight' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:genre:nk]' value='bold' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:average_roi:qk]' max='10.0' min='1.0' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-diverging'>
+                <color>#ae123a</color>
+                <color>#c41e3c</color>
+                <color>#d8303f</color>
+                <color>#e84646</color>
+                <color>#f16051</color>
+                <color>#f77963</color>
+                <color>#fa9079</color>
+                <color>#fda695</color>
+                <color>#ffbab0</color>
+                <color>#fed1cc</color>
+                <color>#fbe6e5</color>
+                <color>#ffffff</color>
+                <color>#c2cec6</color>
+                <color>#adc4b5</color>
+                <color>#99baa5</color>
+                <color>#86b095</color>
+                <color>#74a686</color>
+                <color>#649b78</color>
+                <color>#54916a</color>
+                <color>#46875e</color>
+                <color>#397d52</color>
+                <color>#2e7347</color>
+                <color>#24693d</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#d4d4d4' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:average_roi:qk]' />
+              <color column='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:average_roi:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:genre:nk]</rows>
+        <cols>[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:average_roi:qk]</cols>
+      </table>
+      <simple-id uuid='{A53D88A9-2390-4D21-B583-2C5AA7FD0765}' />
+    </worksheet>
+    <worksheet name='ROI vs Budget'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Return on Investment in Relation to Production Budget</run>
+            <run fontalignment='1'>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='genre_roi' name='federated.15y1ybh1srtyhr0zrf6t11709fgc' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15y1ybh1srtyhr0zrf6t11709fgc'>
+            <column-instance column='[production_budget]' derivation='None' name='[none:production_budget:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[return_ratio]' derivation='None' name='[none:return_ratio:qk]' pivot='key' type='quantitative' />
+            <column caption='Production Budget' datatype='integer' name='[production_budget]' role='measure' type='quantitative' />
+            <column caption='Return Ratio' datatype='real' name='[return_ratio]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]' scope='rows' value='Return on Investment' />
+            <encoding attr='space' class='0' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]' field-type='quantitative' max='454.43659171597631' min='-5.0' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:production_budget:qk]' field-type='quantitative' max='447432888' min='-2000000' range-type='fixed' scope='cols' type='space' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]' value='11' />
+            <format attr='font-weight' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]' value='bold' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#d4d4d4' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]</rows>
+        <cols>[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:production_budget:qk]</cols>
+      </table>
+      <simple-id uuid='{EEDDD8EA-4FE9-49CF-BB2B-5FD99428B0B8}' />
+    </worksheet>
+    <worksheet name='Top Movie Genres'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='16'>Top Movie Genres </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='genre_roi' name='federated.15y1ybh1srtyhr0zrf6t11709fgc' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15y1ybh1srtyhr0zrf6t11709fgc'>
+            <column-instance column='[count]' derivation='Attribute' name='[attr:count:qk]' pivot='key' type='quantitative' />
+            <column caption='Count' datatype='integer' name='[count]' role='measure' type='quantitative' />
+            <column caption='Genre' datatype='string' name='[genre]' role='dimension' type='nominal' />
+            <column-instance column='[genre]' derivation='None' name='[none:genre:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:genre:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Drama&quot;</bucket>
+              <bucket>&quot;Horror&quot;</bucket>
+              <bucket>&quot;Documentary&quot;</bucket>
+              <bucket>&quot;Comedy&quot;</bucket>
+              <bucket>&quot;Romance&quot;</bucket>
+              <bucket>&quot;Thriller&quot;</bucket>
+              <bucket>&quot;Mystery&quot;</bucket>
+              <bucket>&quot;Sci-Fi&quot;</bucket>
+              <bucket>&quot;Family&quot;</bucket>
+              <bucket>&quot;Biography&quot;</bucket>
+              <bucket>&quot;Crime&quot;</bucket>
+              <bucket>&quot;Adventure&quot;</bucket>
+              <bucket>&quot;Action&quot;</bucket>
+              <bucket>&quot;History&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='font-size' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:count:qk]' value='10' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:genre:nk]' value='11' />
+            <format attr='font-weight' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:genre:nk]' value='bold' />
+            <format attr='font-size' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:count:qk]' value='11' />
+            <format attr='font-weight' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:count:qk]' value='bold' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:count:qk]' palette='red_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#d4d4d4' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:genre:nk]' />
+              <text column='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:count:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:genre:nk]</rows>
+        <cols>[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:count:qk]</cols>
+      </table>
+      <simple-id uuid='{6B2B1E38-3848-48A5-A31D-107F28DCB15D}' />
+    </worksheet>
+    <worksheet name='Top movies by ROI'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='16'>Top 30 Movies by Return on Investment</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='genre_roi' name='federated.15y1ybh1srtyhr0zrf6t11709fgc' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15y1ybh1srtyhr0zrf6t11709fgc'>
+            <column caption='Movie' datatype='string' name='[movie]' role='dimension' type='nominal' />
+            <column-instance column='[movie]' derivation='None' name='[none:movie:nk]' pivot='key' type='nominal' />
+            <column-instance column='[production_budget]' derivation='None' name='[none:production_budget:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[return_ratio]' derivation='None' name='[none:return_ratio:qk]' pivot='key' type='quantitative' />
+            <column caption='Production Budget' datatype='integer' name='[production_budget]' role='measure' type='quantitative' />
+            <column caption='Return Ratio' datatype='real' name='[return_ratio]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:movie:nk]'>
+            <groupfilter count='30' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='AVG([return_ratio])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:movie:nk]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]' included-values='in-range'>
+            <min>-1.0</min>
+            <max>430.51999999999998</max>
+          </filter>
+          <slices>
+            <column>[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]</column>
+            <column>[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:movie:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:production_budget:qk]' scope='cols' value='true' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:production_budget:qk]' value='C1033%' />
+            <format attr='font-size' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]' value='11' />
+            <format attr='font-weight' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]' value='bold' />
+            <format attr='font-size' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:production_budget:qk]' value='11' />
+            <format attr='font-weight' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:production_budget:qk]' value='bold' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]' palette='sunrise_sunset_diverging_10_0' symmetric='false' type='interpolated' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#d4d4d4' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='stroke-color' id='refline0' value='#0000004b' />
+            <format attr='fill-above' id='refline1' value='#00000000' />
+            <format attr='fill-below' id='refline1' value='#00000000' />
+            <format attr='stroke-size' id='refline0' value='4' />
+            <format attr='stroke-size' id='refline1' value='4' />
+            <format attr='font-size' id='refline1' value='11' />
+            <format attr='font-weight' id='refline1' value='bold' />
+            <format attr='font-size' id='refline0' value='11' />
+            <format attr='font-weight' id='refline0' value='bold' />
+            <format attr='color' id='refline0' value='#000000' />
+            <format attr='color' id='refline1' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]' />
+            </encodings>
+            <reference-line axis-column='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:production_budget:qk]' enable-instant-analytics='true' formula='average' id='refline0' label-type='value' probability='95' scope='per-pane' value-column='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:production_budget:qk]' z-order='1' />
+            <reference-line axis-column='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]' enable-instant-analytics='true' formula='average' id='refline1' label-type='value' probability='95' scope='per-pane' value-column='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]' z-order='2' />
+          </pane>
+        </panes>
+        <rows>[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]</rows>
+        <cols>[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:production_budget:qk]</cols>
+      </table>
+      <simple-id uuid='{42990119-F614-4CE6-8E27-B30F2AD73E02}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='ROI vs Budget'>
+      <cards>
+        <edge name='left'>
+          <strip size='200'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='38'>
+            <card type='columns' />
+          </strip>
+          <strip size='38'>
+            <card type='rows' />
+          </strip>
+          <strip size='38'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{F50F7F97-8641-4426-AFA5-028F6C31EACB}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Top movies by ROI'>
+      <cards>
+        <edge name='left'>
+          <strip size='200'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='38'>
+            <card type='columns' />
+          </strip>
+          <strip size='38'>
+            <card type='rows' />
+          </strip>
+          <strip size='38'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5280C724-D4B8-4532-96F2-85568C73DAF3}' />
+    </window>
+    <window class='worksheet' name='Top Movie Genres'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:genre:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{3D600034-C3A2-4747-8EC3-EA7D82D6C653}' />
+    </window>
+    <window class='worksheet' name='Genre ROI'>
+      <cards>
+        <edge name='left'>
+          <strip size='200'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:average_roi:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{BF7E7AC7-730F-4945-B30D-DB55F41623D1}' />
+    </window>
+  </windows>
+</workbook>

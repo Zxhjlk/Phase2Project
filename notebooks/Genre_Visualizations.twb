@@ -1,0 +1,2381 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.25.0114.1153                               -->
+<workbook original-version='18.1' source-build='2024.3.3 (20243.25.0114.1153)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <RelationshipCalculations />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='genre_roi' inline='true' name='federated.15y1ybh1srtyhr0zrf6t11709fgc' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='genre_roi' name='textscan.1ygs6qi10d2vh01fropjc1lhkbkk'>
+            <connection class='textscan' directory='C:/Flatiron/Projects/Phase2Project/data' filename='genre_roi.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='cleaned_budgets' name='textscan.1gnv1zl10faww61baehcp0rehyve'>
+            <connection class='textscan' directory='C:/Flatiron/Projects/Phase2Project/data' filename='cleaned_budgets.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='textscan.1gnv1zl10faww61baehcp0rehyve' name='genre_roi.csv' table='[genre_roi#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='string' name='genre' ordinal='1' />
+              <column datatype='real' name='average_roi' ordinal='2' />
+              <column datatype='integer' name='count' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1gnv1zl10faww61baehcp0rehyve' name='cleaned_budgets.csv' table='[cleaned_budgets#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='id' ordinal='0' />
+              <column datatype='date' name='release_date' ordinal='1' />
+              <column datatype='string' name='movie' ordinal='2' />
+              <column datatype='integer' name='production_budget' ordinal='3' />
+              <column datatype='integer' name='domestic_gross' ordinal='4' />
+              <column datatype='integer' name='worldwide_gross' ordinal='5' />
+              <column datatype='real' name='return_ratio' ordinal='6' />
+            </columns>
+          </relation>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[genre_roi.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[cleaned_budgets.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[genre_roi.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>genre</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[genre]</local-name>
+            <parent-name>[genre_roi.csv]</parent-name>
+            <remote-alias>genre</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>average_roi</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[average_roi]</local-name>
+            <parent-name>[genre_roi.csv]</parent-name>
+            <remote-alias>average_roi</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[count]</local-name>
+            <parent-name>[genre_roi.csv]</parent-name>
+            <remote-alias>count</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[cleaned_budgets.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>release_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[release_date]</local-name>
+            <parent-name>[cleaned_budgets.csv]</parent-name>
+            <remote-alias>release_date</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>movie</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[movie]</local-name>
+            <parent-name>[cleaned_budgets.csv]</parent-name>
+            <remote-alias>movie</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>production_budget</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[production_budget]</local-name>
+            <parent-name>[cleaned_budgets.csv]</parent-name>
+            <remote-alias>production_budget</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>domestic_gross</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[domestic_gross]</local-name>
+            <parent-name>[cleaned_budgets.csv]</parent-name>
+            <remote-alias>domestic_gross</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>worldwide_gross</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[worldwide_gross]</local-name>
+            <parent-name>[cleaned_budgets.csv]</parent-name>
+            <remote-alias>worldwide_gross</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>return_ratio</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[return_ratio]</local-name>
+            <parent-name>[cleaned_budgets.csv]</parent-name>
+            <remote-alias>return_ratio</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='cleaned_budgets.csv' datatype='table' name='[__tableau_internal_object_id__].[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]' role='measure' type='quantitative' />
+      <column caption='genre_roi.csv' datatype='table' name='[__tableau_internal_object_id__].[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]' role='measure' type='quantitative' />
+      <column caption='Average Roi' datatype='real' name='[average_roi]' role='measure' type='quantitative' />
+      <column caption='Count' datatype='integer' name='[count]' role='measure' type='quantitative' />
+      <column caption='Domestic Gross' datatype='integer' name='[domestic_gross]' role='measure' type='quantitative' />
+      <column caption='Genre' datatype='string' name='[genre]' role='dimension' type='nominal' />
+      <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column caption='Movie' datatype='string' name='[movie]' role='dimension' type='nominal' />
+      <column caption='Production Budget' datatype='integer' name='[production_budget]' role='measure' type='quantitative' />
+      <column caption='Release Date' datatype='date' name='[release_date]' role='dimension' type='ordinal' />
+      <column caption='Return Ratio' datatype='real' name='[return_ratio]' role='measure' type='quantitative' />
+      <column caption='Worldwide Gross' datatype='integer' name='[worldwide_gross]' role='measure' type='quantitative' />
+      <column-instance column='[genre]' derivation='None' name='[none:genre:nk]' pivot='key' type='nominal' />
+      <column-instance column='[movie]' derivation='None' name='[none:movie:nk]' pivot='key' type='nominal' />
+      <column-instance column='[return_ratio]' derivation='None' name='[none:return_ratio:ok]' pivot='key' type='ordinal' />
+      <group caption='Top Movies by ROI' name='[Top Movies by ROI]' name-style='unqualified' user:ui-builder='filter-group'>
+        <groupfilter count='20' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+          <groupfilter direction='DESC' expression='AVG([return_ratio])' function='order' user:ui-marker='order'>
+            <groupfilter function='level-members' level='[movie]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+          </groupfilter>
+        </groupfilter>
+      </group>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/Eddie/AppData/Local/Temp/TableauTemp/#TableauTemp_0h1tp6r1sy43yp18csifc11idh4v.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/11/2025 07:14:15 PM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD' table='[Extract].[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]' type='table' />
+            <relation name='cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F' table='[Extract].[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]' type='table' />
+          </relation>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>genre_roi.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>genre</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[genre]</local-name>
+              <parent-name>[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]</parent-name>
+              <remote-alias>genre</remote-alias>
+              <ordinal>1</ordinal>
+              <family>genre_roi.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>average_roi</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[average_roi]</local-name>
+              <parent-name>[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]</parent-name>
+              <remote-alias>average_roi</remote-alias>
+              <ordinal>2</ordinal>
+              <family>genre_roi.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>count</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[count]</local-name>
+              <parent-name>[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]</parent-name>
+              <remote-alias>count</remote-alias>
+              <ordinal>3</ordinal>
+              <family>genre_roi.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[id]</local-name>
+              <parent-name>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</parent-name>
+              <remote-alias>id</remote-alias>
+              <ordinal>4</ordinal>
+              <family>cleaned_budgets.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>100</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>release_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[release_date]</local-name>
+              <parent-name>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</parent-name>
+              <remote-alias>release_date</remote-alias>
+              <ordinal>5</ordinal>
+              <family>cleaned_budgets.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1344</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>movie</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[movie]</local-name>
+              <parent-name>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</parent-name>
+              <remote-alias>movie</remote-alias>
+              <ordinal>6</ordinal>
+              <family>cleaned_budgets.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4253</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>production_budget</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[production_budget]</local-name>
+              <parent-name>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</parent-name>
+              <remote-alias>production_budget</remote-alias>
+              <ordinal>7</ordinal>
+              <family>cleaned_budgets.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>357</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>domestic_gross</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[domestic_gross]</local-name>
+              <parent-name>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</parent-name>
+              <remote-alias>domestic_gross</remote-alias>
+              <ordinal>8</ordinal>
+              <family>cleaned_budgets.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3972</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>worldwide_gross</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[worldwide_gross]</local-name>
+              <parent-name>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</parent-name>
+              <remote-alias>worldwide_gross</remote-alias>
+              <ordinal>9</ordinal>
+              <family>cleaned_budgets.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4055</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>return_ratio</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[return_ratio]</local-name>
+              <parent-name>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</parent-name>
+              <remote-alias>return_ratio</remote-alias>
+              <ordinal>10</ordinal>
+              <family>cleaned_budgets.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>819</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' rowDisplayCount='100' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:genre:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Comedy&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Thriller&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;History&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Mystery&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Action&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Romance&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Horror&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Family&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Documentary&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Crime&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Drama&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Biography&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Adventure&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Sci-Fi&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <default-sorts>
+        <natural-sort column='[none:movie:nk]' direction='ASC' />
+        <manual-sort column='[none:return_ratio:ok]' direction='ASC'>
+          <dictionary>
+            <bucket>9.9800000000000004</bucket>
+            <bucket>9.9499999999999993</bucket>
+            <bucket>9.9399999999999995</bucket>
+            <bucket>9.8800000000000008</bucket>
+            <bucket>9.8699999999999992</bucket>
+            <bucket>9.7899999999999991</bucket>
+            <bucket>9.7300000000000004</bucket>
+            <bucket>9.7200000000000006</bucket>
+            <bucket>9.6999999999999993</bucket>
+            <bucket>9.5099999999999998</bucket>
+            <bucket>9.5</bucket>
+            <bucket>9.4399999999999995</bucket>
+            <bucket>9.4100000000000001</bucket>
+            <bucket>9.3800000000000008</bucket>
+            <bucket>9.3699999999999992</bucket>
+            <bucket>9.3100000000000005</bucket>
+            <bucket>9.2799999999999994</bucket>
+            <bucket>9.2400000000000002</bucket>
+            <bucket>9.2300000000000004</bucket>
+            <bucket>9.1500000000000004</bucket>
+            <bucket>9.1099999999999994</bucket>
+            <bucket>9.0399999999999991</bucket>
+            <bucket>9.0299999999999994</bucket>
+            <bucket>88.590000000000003</bucket>
+            <bucket>85.569999999999993</bucket>
+            <bucket>8.9600000000000009</bucket>
+            <bucket>8.9399999999999995</bucket>
+            <bucket>8.9199999999999999</bucket>
+            <bucket>8.9100000000000001</bucket>
+            <bucket>8.8699999999999992</bucket>
+            <bucket>8.8399999999999999</bucket>
+            <bucket>8.7200000000000006</bucket>
+            <bucket>8.7100000000000009</bucket>
+            <bucket>8.6199999999999992</bucket>
+            <bucket>8.5500000000000007</bucket>
+            <bucket>8.5399999999999991</bucket>
+            <bucket>8.5299999999999994</bucket>
+            <bucket>8.5</bucket>
+            <bucket>8.4600000000000009</bucket>
+            <bucket>8.4499999999999993</bucket>
+            <bucket>8.4399999999999995</bucket>
+            <bucket>8.4299999999999997</bucket>
+            <bucket>8.4000000000000004</bucket>
+            <bucket>8.3699999999999992</bucket>
+            <bucket>8.3200000000000003</bucket>
+            <bucket>8.3100000000000005</bucket>
+            <bucket>8.2799999999999994</bucket>
+            <bucket>8.2699999999999996</bucket>
+            <bucket>8.2599999999999998</bucket>
+            <bucket>8.25</bucket>
+            <bucket>8.2300000000000004</bucket>
+            <bucket>8.2100000000000009</bucket>
+            <bucket>8.1699999999999999</bucket>
+            <bucket>8.1600000000000001</bucket>
+            <bucket>8.1500000000000004</bucket>
+            <bucket>8.1400000000000006</bucket>
+            <bucket>8.1300000000000008</bucket>
+            <bucket>8.1099999999999994</bucket>
+            <bucket>8.0899999999999999</bucket>
+            <bucket>8.0800000000000001</bucket>
+            <bucket>8.0700000000000003</bucket>
+            <bucket>8.0500000000000007</bucket>
+            <bucket>8.0399999999999991</bucket>
+            <bucket>8.0199999999999996</bucket>
+            <bucket>73.980000000000004</bucket>
+            <bucket>7.9100000000000001</bucket>
+            <bucket>7.8899999999999997</bucket>
+            <bucket>7.8600000000000003</bucket>
+            <bucket>7.8399999999999999</bucket>
+            <bucket>7.8200000000000003</bucket>
+            <bucket>7.79</bucket>
+            <bucket>7.7800000000000002</bucket>
+            <bucket>7.7300000000000004</bucket>
+            <bucket>7.7000000000000002</bucket>
+            <bucket>7.6899999999999995</bucket>
+            <bucket>7.6100000000000003</bucket>
+            <bucket>7.5999999999999996</bucket>
+            <bucket>7.5899999999999999</bucket>
+            <bucket>7.5800000000000001</bucket>
+            <bucket>7.5700000000000003</bucket>
+            <bucket>7.5300000000000002</bucket>
+            <bucket>7.5199999999999996</bucket>
+            <bucket>7.4900000000000002</bucket>
+            <bucket>7.4800000000000004</bucket>
+            <bucket>7.4699999999999998</bucket>
+            <bucket>7.46</bucket>
+            <bucket>7.4500000000000002</bucket>
+            <bucket>7.4299999999999997</bucket>
+            <bucket>7.4199999999999999</bucket>
+            <bucket>7.4100000000000001</bucket>
+            <bucket>7.4000000000000004</bucket>
+            <bucket>7.3600000000000003</bucket>
+            <bucket>7.3399999999999999</bucket>
+            <bucket>7.3099999999999996</bucket>
+            <bucket>7.2999999999999998</bucket>
+            <bucket>7.2800000000000002</bucket>
+            <bucket>7.2599999999999998</bucket>
+            <bucket>7.25</bucket>
+            <bucket>7.2300000000000004</bucket>
+            <bucket>7.2199999999999998</bucket>
+            <bucket>7.1900000000000004</bucket>
+            <bucket>7.1600000000000001</bucket>
+            <bucket>7.1500000000000004</bucket>
+            <bucket>7.1399999999999997</bucket>
+            <bucket>7.1299999999999999</bucket>
+            <bucket>7.1100000000000003</bucket>
+            <bucket>7.0800000000000001</bucket>
+            <bucket>7.0700000000000003</bucket>
+            <bucket>7.0599999999999996</bucket>
+            <bucket>7.0499999999999998</bucket>
+            <bucket>7.0300000000000002</bucket>
+            <bucket>7.0199999999999996</bucket>
+            <bucket>66.379999999999995</bucket>
+            <bucket>65.950000000000003</bucket>
+            <bucket>65.579999999999998</bucket>
+            <bucket>63.359999999999999</bucket>
+            <bucket>6.9900000000000002</bucket>
+            <bucket>6.9699999999999998</bucket>
+            <bucket>6.9500000000000002</bucket>
+            <bucket>6.9399999999999995</bucket>
+            <bucket>6.9199999999999999</bucket>
+            <bucket>6.8799999999999999</bucket>
+            <bucket>6.8700000000000001</bucket>
+            <bucket>6.8600000000000003</bucket>
+            <bucket>6.8499999999999996</bucket>
+            <bucket>6.7999999999999998</bucket>
+            <bucket>6.79</bucket>
+            <bucket>6.7800000000000002</bucket>
+            <bucket>6.7699999999999996</bucket>
+            <bucket>6.75</bucket>
+            <bucket>6.7400000000000002</bucket>
+            <bucket>6.7300000000000004</bucket>
+            <bucket>6.7199999999999998</bucket>
+            <bucket>6.71</bucket>
+            <bucket>6.7000000000000002</bucket>
+            <bucket>6.6799999999999997</bucket>
+            <bucket>6.6699999999999999</bucket>
+            <bucket>6.6500000000000004</bucket>
+            <bucket>6.6299999999999999</bucket>
+            <bucket>6.6200000000000001</bucket>
+            <bucket>6.5700000000000003</bucket>
+            <bucket>6.5499999999999998</bucket>
+            <bucket>6.5</bucket>
+            <bucket>6.4900000000000002</bucket>
+            <bucket>6.4800000000000004</bucket>
+            <bucket>6.46</bucket>
+            <bucket>6.4400000000000004</bucket>
+            <bucket>6.4199999999999999</bucket>
+            <bucket>6.3799999999999999</bucket>
+            <bucket>6.3600000000000003</bucket>
+            <bucket>6.3499999999999996</bucket>
+            <bucket>6.3300000000000001</bucket>
+            <bucket>6.2800000000000002</bucket>
+            <bucket>6.2699999999999996</bucket>
+            <bucket>6.25</bucket>
+            <bucket>6.2400000000000002</bucket>
+            <bucket>6.2199999999999998</bucket>
+            <bucket>6.21</bucket>
+            <bucket>6.2000000000000002</bucket>
+            <bucket>6.1699999999999999</bucket>
+            <bucket>6.1500000000000004</bucket>
+            <bucket>6.1299999999999999</bucket>
+            <bucket>6.1200000000000001</bucket>
+            <bucket>6.1100000000000003</bucket>
+            <bucket>6.0800000000000001</bucket>
+            <bucket>6.0499999999999998</bucket>
+            <bucket>6.0199999999999996</bucket>
+            <bucket>6.0099999999999998</bucket>
+            <bucket>58.170000000000002</bucket>
+            <bucket>54.789999999999999</bucket>
+            <bucket>54.460000000000001</bucket>
+            <bucket>52.369999999999997</bucket>
+            <bucket>50.07</bucket>
+            <bucket>5.9900000000000002</bucket>
+            <bucket>5.96</bucket>
+            <bucket>5.9500000000000002</bucket>
+            <bucket>5.9399999999999995</bucket>
+            <bucket>5.9299999999999997</bucket>
+            <bucket>5.9000000000000004</bucket>
+            <bucket>5.8899999999999997</bucket>
+            <bucket>5.8700000000000001</bucket>
+            <bucket>5.8499999999999996</bucket>
+            <bucket>5.8399999999999999</bucket>
+            <bucket>5.8300000000000001</bucket>
+            <bucket>5.8200000000000003</bucket>
+            <bucket>5.8100000000000005</bucket>
+            <bucket>5.7999999999999998</bucket>
+            <bucket>5.7599999999999998</bucket>
+            <bucket>5.75</bucket>
+            <bucket>5.7400000000000002</bucket>
+            <bucket>5.7300000000000004</bucket>
+            <bucket>5.71</bucket>
+            <bucket>5.6799999999999997</bucket>
+            <bucket>5.6699999999999999</bucket>
+            <bucket>5.6600000000000001</bucket>
+            <bucket>5.6500000000000004</bucket>
+            <bucket>5.6399999999999997</bucket>
+            <bucket>5.6299999999999999</bucket>
+            <bucket>5.6100000000000003</bucket>
+            <bucket>5.5999999999999996</bucket>
+            <bucket>5.5899999999999999</bucket>
+            <bucket>5.5600000000000005</bucket>
+            <bucket>5.5499999999999998</bucket>
+            <bucket>5.54</bucket>
+            <bucket>5.5300000000000002</bucket>
+            <bucket>5.5099999999999998</bucket>
+            <bucket>5.4699999999999998</bucket>
+            <bucket>5.46</bucket>
+            <bucket>5.4500000000000002</bucket>
+            <bucket>5.4199999999999999</bucket>
+            <bucket>5.4100000000000001</bucket>
+            <bucket>5.3899999999999997</bucket>
+            <bucket>5.3600000000000003</bucket>
+            <bucket>5.3499999999999996</bucket>
+            <bucket>5.3399999999999999</bucket>
+            <bucket>5.3300000000000001</bucket>
+            <bucket>5.3099999999999996</bucket>
+            <bucket>5.29</bucket>
+            <bucket>5.2800000000000002</bucket>
+            <bucket>5.2699999999999996</bucket>
+            <bucket>5.2599999999999998</bucket>
+            <bucket>5.2400000000000002</bucket>
+            <bucket>5.2300000000000004</bucket>
+            <bucket>5.2199999999999998</bucket>
+            <bucket>5.21</bucket>
+            <bucket>5.2000000000000002</bucket>
+            <bucket>5.1900000000000004</bucket>
+            <bucket>5.1600000000000001</bucket>
+            <bucket>5.1500000000000004</bucket>
+            <bucket>5.1399999999999997</bucket>
+            <bucket>5.1299999999999999</bucket>
+            <bucket>5.1200000000000001</bucket>
+            <bucket>5.0999999999999996</bucket>
+            <bucket>5.0899999999999999</bucket>
+            <bucket>5.0800000000000001</bucket>
+            <bucket>5.0700000000000003</bucket>
+            <bucket>5.04</bucket>
+            <bucket>5.0300000000000002</bucket>
+            <bucket>5.0199999999999996</bucket>
+            <bucket>5.0099999999999998</bucket>
+            <bucket>5.0</bucket>
+            <bucket>45.710000000000001</bucket>
+            <bucket>430.51999999999998</bucket>
+            <bucket>43.899999999999999</bucket>
+            <bucket>42.5</bucket>
+            <bucket>415.56</bucket>
+            <bucket>41.409999999999997</bucket>
+            <bucket>40.409999999999997</bucket>
+            <bucket>4.9900000000000002</bucket>
+            <bucket>4.9800000000000004</bucket>
+            <bucket>4.9699999999999998</bucket>
+            <bucket>4.9399999999999995</bucket>
+            <bucket>4.9299999999999997</bucket>
+            <bucket>4.9199999999999999</bucket>
+            <bucket>4.9100000000000001</bucket>
+            <bucket>4.9000000000000004</bucket>
+            <bucket>4.8899999999999997</bucket>
+            <bucket>4.8799999999999999</bucket>
+            <bucket>4.8700000000000001</bucket>
+            <bucket>4.8600000000000003</bucket>
+            <bucket>4.8399999999999999</bucket>
+            <bucket>4.8300000000000001</bucket>
+            <bucket>4.8100000000000005</bucket>
+            <bucket>4.7999999999999998</bucket>
+            <bucket>4.7699999999999996</bucket>
+            <bucket>4.7599999999999998</bucket>
+            <bucket>4.75</bucket>
+            <bucket>4.7300000000000004</bucket>
+            <bucket>4.7199999999999998</bucket>
+            <bucket>4.71</bucket>
+            <bucket>4.7000000000000002</bucket>
+            <bucket>4.6799999999999997</bucket>
+            <bucket>4.6500000000000004</bucket>
+            <bucket>4.6399999999999997</bucket>
+            <bucket>4.6299999999999999</bucket>
+            <bucket>4.6200000000000001</bucket>
+            <bucket>4.6100000000000003</bucket>
+            <bucket>4.5899999999999999</bucket>
+            <bucket>4.5800000000000001</bucket>
+            <bucket>4.5700000000000003</bucket>
+            <bucket>4.5600000000000005</bucket>
+            <bucket>4.5499999999999998</bucket>
+            <bucket>4.54</bucket>
+            <bucket>4.5300000000000002</bucket>
+            <bucket>4.5199999999999996</bucket>
+            <bucket>4.5099999999999998</bucket>
+            <bucket>4.5</bucket>
+            <bucket>4.4900000000000002</bucket>
+            <bucket>4.4699999999999998</bucket>
+            <bucket>4.46</bucket>
+            <bucket>4.4500000000000002</bucket>
+            <bucket>4.4400000000000004</bucket>
+            <bucket>4.4299999999999997</bucket>
+            <bucket>4.4199999999999999</bucket>
+            <bucket>4.4100000000000001</bucket>
+            <bucket>4.4000000000000004</bucket>
+            <bucket>4.3899999999999997</bucket>
+            <bucket>4.3799999999999999</bucket>
+            <bucket>4.3700000000000001</bucket>
+            <bucket>4.3499999999999996</bucket>
+            <bucket>4.3399999999999999</bucket>
+            <bucket>4.3300000000000001</bucket>
+            <bucket>4.3099999999999996</bucket>
+            <bucket>4.2999999999999998</bucket>
+            <bucket>4.29</bucket>
+            <bucket>4.2800000000000002</bucket>
+            <bucket>4.2699999999999996</bucket>
+            <bucket>4.2599999999999998</bucket>
+            <bucket>4.25</bucket>
+            <bucket>4.2300000000000004</bucket>
+            <bucket>4.2199999999999998</bucket>
+            <bucket>4.21</bucket>
+            <bucket>4.2000000000000002</bucket>
+            <bucket>4.1900000000000004</bucket>
+            <bucket>4.1799999999999997</bucket>
+            <bucket>4.1699999999999999</bucket>
+            <bucket>4.1600000000000001</bucket>
+            <bucket>4.1500000000000004</bucket>
+            <bucket>4.1299999999999999</bucket>
+            <bucket>4.1200000000000001</bucket>
+            <bucket>4.1100000000000003</bucket>
+            <bucket>4.0999999999999996</bucket>
+            <bucket>4.0899999999999999</bucket>
+            <bucket>4.0800000000000001</bucket>
+            <bucket>4.0700000000000003</bucket>
+            <bucket>4.0599999999999996</bucket>
+            <bucket>4.0499999999999998</bucket>
+            <bucket>4.04</bucket>
+            <bucket>4.0300000000000002</bucket>
+            <bucket>4.0199999999999996</bucket>
+            <bucket>4.0099999999999998</bucket>
+            <bucket>4.0</bucket>
+            <bucket>39.600000000000001</bucket>
+            <bucket>38.520000000000003</bucket>
+            <bucket>38.200000000000003</bucket>
+            <bucket>37.979999999999997</bucket>
+            <bucket>35.859999999999999</bucket>
+            <bucket>341.06</bucket>
+            <bucket>32.060000000000002</bucket>
+            <bucket>31.379999999999999</bucket>
+            <bucket>30.02</bucket>
+            <bucket>3.96</bucket>
+            <bucket>3.9500000000000002</bucket>
+            <bucket>3.9399999999999999</bucket>
+            <bucket>3.9300000000000002</bucket>
+            <bucket>3.9199999999999999</bucket>
+            <bucket>3.9100000000000001</bucket>
+            <bucket>3.8900000000000001</bucket>
+            <bucket>3.8799999999999999</bucket>
+            <bucket>3.8700000000000001</bucket>
+            <bucket>3.8599999999999999</bucket>
+            <bucket>3.8500000000000001</bucket>
+            <bucket>3.8399999999999999</bucket>
+            <bucket>3.8300000000000001</bucket>
+            <bucket>3.8199999999999998</bucket>
+            <bucket>3.8100000000000001</bucket>
+            <bucket>3.7999999999999998</bucket>
+            <bucket>3.79</bucket>
+            <bucket>3.77</bucket>
+            <bucket>3.7599999999999998</bucket>
+            <bucket>3.75</bucket>
+            <bucket>3.7400000000000002</bucket>
+            <bucket>3.73</bucket>
+            <bucket>3.7199999999999998</bucket>
+            <bucket>3.71</bucket>
+            <bucket>3.7000000000000002</bucket>
+            <bucket>3.6899999999999999</bucket>
+            <bucket>3.6800000000000002</bucket>
+            <bucket>3.6600000000000001</bucket>
+            <bucket>3.6400000000000001</bucket>
+            <bucket>3.6299999999999999</bucket>
+            <bucket>3.6000000000000001</bucket>
+            <bucket>3.5899999999999999</bucket>
+            <bucket>3.5800000000000001</bucket>
+            <bucket>3.5699999999999998</bucket>
+            <bucket>3.5600000000000001</bucket>
+            <bucket>3.5499999999999998</bucket>
+            <bucket>3.54</bucket>
+            <bucket>3.5300000000000002</bucket>
+            <bucket>3.52</bucket>
+            <bucket>3.5099999999999998</bucket>
+            <bucket>3.5</bucket>
+            <bucket>3.48</bucket>
+            <bucket>3.4699999999999998</bucket>
+            <bucket>3.46</bucket>
+            <bucket>3.4500000000000002</bucket>
+            <bucket>3.4399999999999999</bucket>
+            <bucket>3.4300000000000002</bucket>
+            <bucket>3.4199999999999999</bucket>
+            <bucket>3.3999999999999999</bucket>
+            <bucket>3.3900000000000001</bucket>
+            <bucket>3.3700000000000001</bucket>
+            <bucket>3.3599999999999999</bucket>
+            <bucket>3.3500000000000001</bucket>
+            <bucket>3.3399999999999999</bucket>
+            <bucket>3.3300000000000001</bucket>
+            <bucket>3.3199999999999998</bucket>
+            <bucket>3.3100000000000001</bucket>
+            <bucket>3.2999999999999998</bucket>
+            <bucket>3.29</bucket>
+            <bucket>3.2800000000000002</bucket>
+            <bucket>3.27</bucket>
+            <bucket>3.2599999999999998</bucket>
+            <bucket>3.25</bucket>
+            <bucket>3.2400000000000002</bucket>
+            <bucket>3.23</bucket>
+            <bucket>3.2200000000000002</bucket>
+            <bucket>3.21</bucket>
+            <bucket>3.2000000000000002</bucket>
+            <bucket>3.1899999999999999</bucket>
+            <bucket>3.1800000000000002</bucket>
+            <bucket>3.1699999999999999</bucket>
+            <bucket>3.1600000000000001</bucket>
+            <bucket>3.1499999999999999</bucket>
+            <bucket>3.1400000000000001</bucket>
+            <bucket>3.1299999999999999</bucket>
+            <bucket>3.1200000000000001</bucket>
+            <bucket>3.1000000000000001</bucket>
+            <bucket>3.0899999999999999</bucket>
+            <bucket>3.0800000000000001</bucket>
+            <bucket>3.0699999999999998</bucket>
+            <bucket>3.0600000000000001</bucket>
+            <bucket>3.0499999999999998</bucket>
+            <bucket>3.04</bucket>
+            <bucket>3.0299999999999998</bucket>
+            <bucket>3.02</bucket>
+            <bucket>3.0099999999999998</bucket>
+            <bucket>3.0</bucket>
+            <bucket>29.59</bucket>
+            <bucket>29.530000000000001</bucket>
+            <bucket>29.420000000000002</bucket>
+            <bucket>28.760000000000002</bucket>
+            <bucket>28.27</bucket>
+            <bucket>28.239999999999998</bucket>
+            <bucket>27.719999999999999</bucket>
+            <bucket>27.559999999999999</bucket>
+            <bucket>26.699999999999999</bucket>
+            <bucket>26.469999999999999</bucket>
+            <bucket>26.18</bucket>
+            <bucket>25.890000000000001</bucket>
+            <bucket>25.370000000000001</bucket>
+            <bucket>25.030000000000001</bucket>
+            <bucket>24.75</bucket>
+            <bucket>24.600000000000001</bucket>
+            <bucket>24.489999999999998</bucket>
+            <bucket>24.48</bucket>
+            <bucket>24.0</bucket>
+            <bucket>23.940000000000001</bucket>
+            <bucket>23.890000000000001</bucket>
+            <bucket>23.789999999999999</bucket>
+            <bucket>23.66</bucket>
+            <bucket>23.359999999999999</bucket>
+            <bucket>22.969999999999999</bucket>
+            <bucket>21.82</bucket>
+            <bucket>21.52</bucket>
+            <bucket>20.879999999999999</bucket>
+            <bucket>20.850000000000001</bucket>
+            <bucket>20.800000000000001</bucket>
+            <bucket>20.66</bucket>
+            <bucket>20.32</bucket>
+            <bucket>2.9900000000000002</bucket>
+            <bucket>2.98</bucket>
+            <bucket>2.9699999999999998</bucket>
+            <bucket>2.96</bucket>
+            <bucket>2.9500000000000002</bucket>
+            <bucket>2.9399999999999999</bucket>
+            <bucket>2.9300000000000002</bucket>
+            <bucket>2.9100000000000001</bucket>
+            <bucket>2.8999999999999999</bucket>
+            <bucket>2.8799999999999999</bucket>
+            <bucket>2.8700000000000001</bucket>
+            <bucket>2.8599999999999999</bucket>
+            <bucket>2.8500000000000001</bucket>
+            <bucket>2.8399999999999999</bucket>
+            <bucket>2.8300000000000001</bucket>
+            <bucket>2.8199999999999998</bucket>
+            <bucket>2.8100000000000001</bucket>
+            <bucket>2.79</bucket>
+            <bucket>2.7800000000000002</bucket>
+            <bucket>2.77</bucket>
+            <bucket>2.7599999999999998</bucket>
+            <bucket>2.75</bucket>
+            <bucket>2.7400000000000002</bucket>
+            <bucket>2.73</bucket>
+            <bucket>2.7199999999999998</bucket>
+            <bucket>2.71</bucket>
+            <bucket>2.7000000000000002</bucket>
+            <bucket>2.6899999999999999</bucket>
+            <bucket>2.6699999999999999</bucket>
+            <bucket>2.6600000000000001</bucket>
+            <bucket>2.6499999999999999</bucket>
+            <bucket>2.6400000000000001</bucket>
+            <bucket>2.6299999999999999</bucket>
+            <bucket>2.6200000000000001</bucket>
+            <bucket>2.6099999999999999</bucket>
+            <bucket>2.6000000000000001</bucket>
+            <bucket>2.5899999999999999</bucket>
+            <bucket>2.5800000000000001</bucket>
+            <bucket>2.5699999999999998</bucket>
+            <bucket>2.5600000000000001</bucket>
+            <bucket>2.5499999999999998</bucket>
+            <bucket>2.54</bucket>
+            <bucket>2.5300000000000002</bucket>
+            <bucket>2.52</bucket>
+            <bucket>2.5099999999999998</bucket>
+            <bucket>2.5</bucket>
+            <bucket>2.4900000000000002</bucket>
+            <bucket>2.48</bucket>
+            <bucket>2.4699999999999998</bucket>
+            <bucket>2.46</bucket>
+            <bucket>2.4500000000000002</bucket>
+            <bucket>2.4399999999999999</bucket>
+            <bucket>2.4300000000000002</bucket>
+            <bucket>2.4199999999999999</bucket>
+            <bucket>2.4100000000000001</bucket>
+            <bucket>2.3999999999999999</bucket>
+            <bucket>2.3900000000000001</bucket>
+            <bucket>2.3799999999999999</bucket>
+            <bucket>2.3700000000000001</bucket>
+            <bucket>2.3599999999999999</bucket>
+            <bucket>2.3500000000000001</bucket>
+            <bucket>2.3399999999999999</bucket>
+            <bucket>2.3300000000000001</bucket>
+            <bucket>2.3199999999999998</bucket>
+            <bucket>2.3100000000000001</bucket>
+            <bucket>2.2999999999999998</bucket>
+            <bucket>2.29</bucket>
+            <bucket>2.2800000000000002</bucket>
+            <bucket>2.27</bucket>
+            <bucket>2.2599999999999998</bucket>
+            <bucket>2.25</bucket>
+            <bucket>2.2400000000000002</bucket>
+            <bucket>2.23</bucket>
+            <bucket>2.2200000000000002</bucket>
+            <bucket>2.21</bucket>
+            <bucket>2.2000000000000002</bucket>
+            <bucket>2.1899999999999999</bucket>
+            <bucket>2.1800000000000002</bucket>
+            <bucket>2.1699999999999999</bucket>
+            <bucket>2.1600000000000001</bucket>
+            <bucket>2.1499999999999999</bucket>
+            <bucket>2.1400000000000001</bucket>
+            <bucket>2.1299999999999999</bucket>
+            <bucket>2.1200000000000001</bucket>
+            <bucket>2.1099999999999999</bucket>
+            <bucket>2.1000000000000001</bucket>
+            <bucket>2.0899999999999999</bucket>
+            <bucket>2.0800000000000001</bucket>
+            <bucket>2.0699999999999998</bucket>
+            <bucket>2.0600000000000001</bucket>
+            <bucket>2.0499999999999998</bucket>
+            <bucket>2.04</bucket>
+            <bucket>2.0299999999999998</bucket>
+            <bucket>2.02</bucket>
+            <bucket>2.0099999999999998</bucket>
+            <bucket>2.0</bucket>
+            <bucket>19.66</bucket>
+            <bucket>19.359999999999999</bucket>
+            <bucket>19.23</bucket>
+            <bucket>19.100000000000001</bucket>
+            <bucket>18.93</bucket>
+            <bucket>18.809999999999999</bucket>
+            <bucket>18.739999999999998</bucket>
+            <bucket>18.68</bucket>
+            <bucket>18.59</bucket>
+            <bucket>18.5</bucket>
+            <bucket>18.41</bucket>
+            <bucket>18.210000000000001</bucket>
+            <bucket>17.940000000000001</bucket>
+            <bucket>17.780000000000001</bucket>
+            <bucket>17.73</bucket>
+            <bucket>17.449999999999999</bucket>
+            <bucket>17.18</bucket>
+            <bucket>163.58000000000001</bucket>
+            <bucket>16.59</bucket>
+            <bucket>16.129999999999999</bucket>
+            <bucket>154.49000000000001</bucket>
+            <bucket>15.83</bucket>
+            <bucket>15.789999999999999</bucket>
+            <bucket>15.6</bucket>
+            <bucket>15.57</bucket>
+            <bucket>15.550000000000001</bucket>
+            <bucket>15.43</bucket>
+            <bucket>15.390000000000001</bucket>
+            <bucket>15.27</bucket>
+            <bucket>15.17</bucket>
+            <bucket>14.94</bucket>
+            <bucket>14.9</bucket>
+            <bucket>14.859999999999999</bucket>
+            <bucket>14.74</bucket>
+            <bucket>14.68</bucket>
+            <bucket>14.470000000000001</bucket>
+            <bucket>14.24</bucket>
+            <bucket>14.23</bucket>
+            <bucket>14.19</bucket>
+            <bucket>14.18</bucket>
+            <bucket>14.1</bucket>
+            <bucket>14.050000000000001</bucket>
+            <bucket>13.91</bucket>
+            <bucket>13.81</bucket>
+            <bucket>13.66</bucket>
+            <bucket>13.59</bucket>
+            <bucket>13.52</bucket>
+            <bucket>13.470000000000001</bucket>
+            <bucket>13.44</bucket>
+            <bucket>13.41</bucket>
+            <bucket>13.32</bucket>
+            <bucket>13.27</bucket>
+            <bucket>13.23</bucket>
+            <bucket>13.0</bucket>
+            <bucket>12.869999999999999</bucket>
+            <bucket>12.85</bucket>
+            <bucket>12.81</bucket>
+            <bucket>12.800000000000001</bucket>
+            <bucket>12.75</bucket>
+            <bucket>12.69</bucket>
+            <bucket>12.58</bucket>
+            <bucket>12.460000000000001</bucket>
+            <bucket>12.390000000000001</bucket>
+            <bucket>12.35</bucket>
+            <bucket>12.34</bucket>
+            <bucket>12.33</bucket>
+            <bucket>12.32</bucket>
+            <bucket>12.31</bucket>
+            <bucket>12.02</bucket>
+            <bucket>119.28</bucket>
+            <bucket>114.31</bucket>
+            <bucket>110.04000000000001</bucket>
+            <bucket>11.93</bucket>
+            <bucket>11.85</bucket>
+            <bucket>11.83</bucket>
+            <bucket>11.75</bucket>
+            <bucket>11.73</bucket>
+            <bucket>11.710000000000001</bucket>
+            <bucket>11.68</bucket>
+            <bucket>11.58</bucket>
+            <bucket>11.460000000000001</bucket>
+            <bucket>11.4</bucket>
+            <bucket>11.390000000000001</bucket>
+            <bucket>11.27</bucket>
+            <bucket>11.23</bucket>
+            <bucket>11.220000000000001</bucket>
+            <bucket>11.15</bucket>
+            <bucket>11.140000000000001</bucket>
+            <bucket>11.119999999999999</bucket>
+            <bucket>11.050000000000001</bucket>
+            <bucket>11.039999999999999</bucket>
+            <bucket>11.02</bucket>
+            <bucket>11.0</bucket>
+            <bucket>101.43000000000001</bucket>
+            <bucket>100.76000000000001</bucket>
+            <bucket>10.9</bucket>
+            <bucket>10.880000000000001</bucket>
+            <bucket>10.85</bucket>
+            <bucket>10.84</bucket>
+            <bucket>10.82</bucket>
+            <bucket>10.81</bucket>
+            <bucket>10.800000000000001</bucket>
+            <bucket>10.76</bucket>
+            <bucket>10.75</bucket>
+            <bucket>10.67</bucket>
+            <bucket>10.630000000000001</bucket>
+            <bucket>10.58</bucket>
+            <bucket>10.56</bucket>
+            <bucket>10.5</bucket>
+            <bucket>10.44</bucket>
+            <bucket>10.34</bucket>
+            <bucket>10.279999999999999</bucket>
+            <bucket>10.26</bucket>
+            <bucket>10.119999999999999</bucket>
+            <bucket>10.08</bucket>
+            <bucket>1.99</bucket>
+            <bucket>1.98</bucket>
+            <bucket>1.97</bucket>
+            <bucket>1.96</bucket>
+            <bucket>1.95</bucket>
+            <bucket>1.9399999999999999</bucket>
+            <bucket>1.9300000000000002</bucket>
+            <bucket>1.9199999999999999</bucket>
+            <bucket>1.9100000000000001</bucket>
+            <bucket>1.8999999999999999</bucket>
+            <bucket>1.8900000000000001</bucket>
+            <bucket>1.8799999999999999</bucket>
+            <bucket>1.8700000000000001</bucket>
+            <bucket>1.8599999999999999</bucket>
+            <bucket>1.8500000000000001</bucket>
+            <bucket>1.8399999999999999</bucket>
+            <bucket>1.8300000000000001</bucket>
+            <bucket>1.8199999999999998</bucket>
+            <bucket>1.8100000000000001</bucket>
+            <bucket>1.8</bucket>
+            <bucket>1.79</bucket>
+            <bucket>1.78</bucket>
+            <bucket>1.77</bucket>
+            <bucket>1.76</bucket>
+            <bucket>1.75</bucket>
+            <bucket>1.74</bucket>
+            <bucket>1.73</bucket>
+            <bucket>1.72</bucket>
+            <bucket>1.71</bucket>
+            <bucket>1.7</bucket>
+            <bucket>1.6899999999999999</bucket>
+            <bucket>1.6800000000000002</bucket>
+            <bucket>1.6699999999999999</bucket>
+            <bucket>1.6600000000000001</bucket>
+            <bucket>1.6499999999999999</bucket>
+            <bucket>1.6400000000000001</bucket>
+            <bucket>1.6299999999999999</bucket>
+            <bucket>1.6200000000000001</bucket>
+            <bucket>1.6099999999999999</bucket>
+            <bucket>1.6000000000000001</bucket>
+            <bucket>1.5899999999999999</bucket>
+            <bucket>1.5800000000000001</bucket>
+            <bucket>1.5699999999999998</bucket>
+            <bucket>1.5600000000000001</bucket>
+            <bucket>1.55</bucket>
+            <bucket>1.54</bucket>
+            <bucket>1.53</bucket>
+            <bucket>1.52</bucket>
+            <bucket>1.51</bucket>
+            <bucket>1.5</bucket>
+            <bucket>1.49</bucket>
+            <bucket>1.48</bucket>
+            <bucket>1.47</bucket>
+            <bucket>1.46</bucket>
+            <bucket>1.45</bucket>
+            <bucket>1.4399999999999999</bucket>
+            <bucket>1.4299999999999999</bucket>
+            <bucket>1.4199999999999999</bucket>
+            <bucket>1.4099999999999999</bucket>
+            <bucket>1.3999999999999999</bucket>
+            <bucket>1.3900000000000001</bucket>
+            <bucket>1.3799999999999999</bucket>
+            <bucket>1.3700000000000001</bucket>
+            <bucket>1.3599999999999999</bucket>
+            <bucket>1.3500000000000001</bucket>
+            <bucket>1.3400000000000001</bucket>
+            <bucket>1.3300000000000001</bucket>
+            <bucket>1.3200000000000001</bucket>
+            <bucket>1.3100000000000001</bucket>
+            <bucket>1.3</bucket>
+            <bucket>1.29</bucket>
+            <bucket>1.28</bucket>
+            <bucket>1.27</bucket>
+            <bucket>1.26</bucket>
+            <bucket>1.25</bucket>
+            <bucket>1.24</bucket>
+            <bucket>1.23</bucket>
+            <bucket>1.22</bucket>
+            <bucket>1.21</bucket>
+            <bucket>1.2</bucket>
+            <bucket>1.1899999999999999</bucket>
+            <bucket>1.1799999999999999</bucket>
+            <bucket>1.1699999999999999</bucket>
+            <bucket>1.1599999999999999</bucket>
+            <bucket>1.1499999999999999</bucket>
+            <bucket>1.1400000000000001</bucket>
+            <bucket>1.1299999999999999</bucket>
+            <bucket>1.1200000000000001</bucket>
+            <bucket>1.1100000000000001</bucket>
+            <bucket>1.1000000000000001</bucket>
+            <bucket>1.0900000000000001</bucket>
+            <bucket>1.0800000000000001</bucket>
+            <bucket>1.0700000000000001</bucket>
+            <bucket>1.0600000000000001</bucket>
+            <bucket>1.05</bucket>
+            <bucket>1.04</bucket>
+            <bucket>1.03</bucket>
+            <bucket>1.02</bucket>
+            <bucket>1.01</bucket>
+            <bucket>1.0</bucket>
+            <bucket>0.98999999999999999</bucket>
+            <bucket>0.97999999999999998</bucket>
+            <bucket>0.96999999999999997</bucket>
+            <bucket>0.95999999999999996</bucket>
+            <bucket>0.94999999999999996</bucket>
+            <bucket>0.93999999999999995</bucket>
+            <bucket>0.93000000000000005</bucket>
+            <bucket>0.92000000000000004</bucket>
+            <bucket>0.91000000000000003</bucket>
+            <bucket>0.90000000000000002</bucket>
+            <bucket>0.89000000000000001</bucket>
+            <bucket>0.88</bucket>
+            <bucket>0.87</bucket>
+            <bucket>0.85999999999999999</bucket>
+            <bucket>0.84999999999999998</bucket>
+            <bucket>0.83999999999999997</bucket>
+            <bucket>0.82999999999999996</bucket>
+            <bucket>0.81999999999999995</bucket>
+            <bucket>0.81000000000000005</bucket>
+            <bucket>0.80000000000000004</bucket>
+            <bucket>0.79000000000000004</bucket>
+            <bucket>0.78000000000000003</bucket>
+            <bucket>0.77000000000000002</bucket>
+            <bucket>0.76000000000000001</bucket>
+            <bucket>0.75</bucket>
+            <bucket>0.73999999999999999</bucket>
+            <bucket>0.72999999999999998</bucket>
+            <bucket>0.71999999999999997</bucket>
+            <bucket>0.70999999999999996</bucket>
+            <bucket>0.69999999999999996</bucket>
+            <bucket>0.68999999999999995</bucket>
+            <bucket>0.68000000000000005</bucket>
+            <bucket>0.67000000000000004</bucket>
+            <bucket>0.66000000000000003</bucket>
+            <bucket>0.65000000000000002</bucket>
+            <bucket>0.64000000000000001</bucket>
+            <bucket>0.63</bucket>
+            <bucket>0.62</bucket>
+            <bucket>0.60999999999999999</bucket>
+            <bucket>0.59999999999999998</bucket>
+            <bucket>0.58999999999999997</bucket>
+            <bucket>0.57999999999999996</bucket>
+            <bucket>0.56999999999999995</bucket>
+            <bucket>0.56000000000000005</bucket>
+            <bucket>0.55000000000000004</bucket>
+            <bucket>0.54000000000000004</bucket>
+            <bucket>0.53000000000000003</bucket>
+            <bucket>0.52000000000000002</bucket>
+            <bucket>0.51000000000000001</bucket>
+            <bucket>0.5</bucket>
+            <bucket>0.48999999999999999</bucket>
+            <bucket>0.47999999999999998</bucket>
+            <bucket>0.46999999999999997</bucket>
+            <bucket>0.46000000000000002</bucket>
+            <bucket>0.45000000000000001</bucket>
+            <bucket>0.44</bucket>
+            <bucket>0.42999999999999999</bucket>
+            <bucket>0.41999999999999998</bucket>
+            <bucket>0.40999999999999998</bucket>
+            <bucket>0.40000000000000002</bucket>
+            <bucket>0.39000000000000001</bucket>
+            <bucket>0.38</bucket>
+            <bucket>0.37</bucket>
+            <bucket>0.35999999999999999</bucket>
+            <bucket>0.34999999999999998</bucket>
+            <bucket>0.34000000000000002</bucket>
+            <bucket>0.33000000000000002</bucket>
+            <bucket>0.32000000000000001</bucket>
+            <bucket>0.31</bucket>
+            <bucket>0.29999999999999999</bucket>
+            <bucket>0.28999999999999998</bucket>
+            <bucket>0.28000000000000003</bucket>
+            <bucket>0.27000000000000002</bucket>
+            <bucket>0.26000000000000001</bucket>
+            <bucket>0.25</bucket>
+            <bucket>0.23999999999999999</bucket>
+            <bucket>0.23000000000000001</bucket>
+            <bucket>0.22</bucket>
+            <bucket>0.20999999999999999</bucket>
+            <bucket>0.20000000000000001</bucket>
+            <bucket>0.19</bucket>
+            <bucket>0.17999999999999999</bucket>
+            <bucket>0.17000000000000001</bucket>
+            <bucket>0.16</bucket>
+            <bucket>0.14999999999999999</bucket>
+            <bucket>0.14000000000000001</bucket>
+            <bucket>0.13</bucket>
+            <bucket>0.12</bucket>
+            <bucket>0.11</bucket>
+            <bucket>0.10000000000000001</bucket>
+            <bucket>0.089999999999999997</bucket>
+            <bucket>0.080000000000000002</bucket>
+            <bucket>0.070000000000000007</bucket>
+            <bucket>0.059999999999999998</bucket>
+            <bucket>0.050000000000000003</bucket>
+            <bucket>0.040000000000000001</bucket>
+            <bucket>0.029999999999999999</bucket>
+            <bucket>0.02</bucket>
+            <bucket>0.01</bucket>
+            <bucket>0.0</bucket>
+            <bucket>-1.0</bucket>
+            <bucket>-0.98999999999999999</bucket>
+            <bucket>-0.97999999999999998</bucket>
+            <bucket>-0.96999999999999997</bucket>
+            <bucket>-0.95999999999999996</bucket>
+            <bucket>-0.94999999999999996</bucket>
+            <bucket>-0.93999999999999995</bucket>
+            <bucket>-0.93000000000000005</bucket>
+            <bucket>-0.92000000000000004</bucket>
+            <bucket>-0.91000000000000003</bucket>
+            <bucket>-0.90000000000000002</bucket>
+            <bucket>-0.89000000000000001</bucket>
+            <bucket>-0.88</bucket>
+            <bucket>-0.87</bucket>
+            <bucket>-0.85999999999999999</bucket>
+            <bucket>-0.84999999999999998</bucket>
+            <bucket>-0.83999999999999997</bucket>
+            <bucket>-0.82999999999999996</bucket>
+            <bucket>-0.81999999999999995</bucket>
+            <bucket>-0.81000000000000005</bucket>
+            <bucket>-0.80000000000000004</bucket>
+            <bucket>-0.79000000000000004</bucket>
+            <bucket>-0.78000000000000003</bucket>
+            <bucket>-0.77000000000000002</bucket>
+            <bucket>-0.76000000000000001</bucket>
+            <bucket>-0.75</bucket>
+            <bucket>-0.73999999999999999</bucket>
+            <bucket>-0.72999999999999998</bucket>
+            <bucket>-0.71999999999999997</bucket>
+            <bucket>-0.70999999999999996</bucket>
+            <bucket>-0.69999999999999996</bucket>
+            <bucket>-0.68999999999999995</bucket>
+            <bucket>-0.68000000000000005</bucket>
+            <bucket>-0.67000000000000004</bucket>
+            <bucket>-0.66000000000000003</bucket>
+            <bucket>-0.65000000000000002</bucket>
+            <bucket>-0.64000000000000001</bucket>
+            <bucket>-0.63</bucket>
+            <bucket>-0.62</bucket>
+            <bucket>-0.60999999999999999</bucket>
+            <bucket>-0.59999999999999998</bucket>
+            <bucket>-0.58999999999999997</bucket>
+            <bucket>-0.57999999999999996</bucket>
+            <bucket>-0.56999999999999995</bucket>
+            <bucket>-0.56000000000000005</bucket>
+            <bucket>-0.55000000000000004</bucket>
+            <bucket>-0.54000000000000004</bucket>
+            <bucket>-0.53000000000000003</bucket>
+            <bucket>-0.52000000000000002</bucket>
+            <bucket>-0.51000000000000001</bucket>
+            <bucket>-0.5</bucket>
+            <bucket>-0.48999999999999999</bucket>
+            <bucket>-0.47999999999999998</bucket>
+            <bucket>-0.46999999999999997</bucket>
+            <bucket>-0.46000000000000002</bucket>
+            <bucket>-0.45000000000000001</bucket>
+            <bucket>-0.44</bucket>
+            <bucket>-0.42999999999999999</bucket>
+            <bucket>-0.41999999999999998</bucket>
+            <bucket>-0.40999999999999998</bucket>
+            <bucket>-0.40000000000000002</bucket>
+            <bucket>-0.39000000000000001</bucket>
+            <bucket>-0.38</bucket>
+            <bucket>-0.37</bucket>
+            <bucket>-0.35999999999999999</bucket>
+            <bucket>-0.34999999999999998</bucket>
+            <bucket>-0.34000000000000002</bucket>
+            <bucket>-0.33000000000000002</bucket>
+            <bucket>-0.32000000000000001</bucket>
+            <bucket>-0.31</bucket>
+            <bucket>-0.29999999999999999</bucket>
+            <bucket>-0.28999999999999998</bucket>
+            <bucket>-0.28000000000000003</bucket>
+            <bucket>-0.27000000000000002</bucket>
+            <bucket>-0.26000000000000001</bucket>
+            <bucket>-0.25</bucket>
+            <bucket>-0.23999999999999999</bucket>
+            <bucket>-0.23000000000000001</bucket>
+            <bucket>-0.22</bucket>
+            <bucket>-0.20999999999999999</bucket>
+            <bucket>-0.20000000000000001</bucket>
+            <bucket>-0.19</bucket>
+            <bucket>-0.17999999999999999</bucket>
+            <bucket>-0.17000000000000001</bucket>
+            <bucket>-0.16</bucket>
+            <bucket>-0.14999999999999999</bucket>
+            <bucket>-0.14000000000000001</bucket>
+            <bucket>-0.13</bucket>
+            <bucket>-0.12</bucket>
+            <bucket>-0.11</bucket>
+            <bucket>-0.10000000000000001</bucket>
+            <bucket>-0.089999999999999997</bucket>
+            <bucket>-0.080000000000000002</bucket>
+            <bucket>-0.070000000000000007</bucket>
+            <bucket>-0.059999999999999998</bucket>
+            <bucket>-0.050000000000000003</bucket>
+            <bucket>-0.040000000000000001</bucket>
+            <bucket>-0.029999999999999999</bucket>
+            <bucket>-0.02</bucket>
+            <bucket>-0.01</bucket>
+          </dictionary>
+        </manual-sort>
+      </default-sorts>
+      <object-graph>
+        <objects>
+          <object caption='cleaned_budgets.csv' id='cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F'>
+            <properties context=''>
+              <relation connection='textscan.1gnv1zl10faww61baehcp0rehyve' name='cleaned_budgets.csv' table='[cleaned_budgets#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='id' ordinal='0' />
+                  <column datatype='date' name='release_date' ordinal='1' />
+                  <column datatype='string' name='movie' ordinal='2' />
+                  <column datatype='integer' name='production_budget' ordinal='3' />
+                  <column datatype='integer' name='domestic_gross' ordinal='4' />
+                  <column datatype='integer' name='worldwide_gross' ordinal='5' />
+                  <column datatype='real' name='return_ratio' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F' table='[Extract].[cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F]' type='table' />
+            </properties>
+          </object>
+          <object caption='genre_roi.csv' id='genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD'>
+            <properties context=''>
+              <relation connection='textscan.1gnv1zl10faww61baehcp0rehyve' name='genre_roi.csv' table='[genre_roi#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='string' name='genre' ordinal='1' />
+                  <column datatype='real' name='average_roi' ordinal='2' />
+                  <column datatype='integer' name='count' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD' table='[Extract].[genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='1' />
+              <expression op='1' />
+            </expression>
+            <first-end-point object-id='genre_roi.csv_05DCC925E54E4164B842627D4F1A42FD' />
+            <second-end-point object-id='cleaned_budgets.csv_7ACF6FB07F2F4DAF8EF6EA60A224A53F' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Genre ROI'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Average Return on Investment per Genre</run>
+            <run fontalignment='1'>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='genre_roi' name='federated.15y1ybh1srtyhr0zrf6t11709fgc' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15y1ybh1srtyhr0zrf6t11709fgc'>
+            <column-instance column='[average_roi]' derivation='Attribute' name='[attr:average_roi:qk]' pivot='key' type='quantitative' />
+            <column caption='Average Roi' datatype='real' name='[average_roi]' role='measure' type='quantitative' />
+            <column caption='Genre' datatype='string' name='[genre]' role='dimension' type='nominal' />
+            <column-instance column='[genre]' derivation='None' name='[none:genre:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:genre:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Thriller&quot;</bucket>
+              <bucket>&quot;Horror&quot;</bucket>
+              <bucket>&quot;Biography&quot;</bucket>
+              <bucket>&quot;Sci-Fi&quot;</bucket>
+              <bucket>&quot;History&quot;</bucket>
+              <bucket>&quot;Romance&quot;</bucket>
+              <bucket>&quot;Family&quot;</bucket>
+              <bucket>&quot;Drama&quot;</bucket>
+              <bucket>&quot;Comedy&quot;</bucket>
+              <bucket>&quot;Action&quot;</bucket>
+              <bucket>&quot;Crime&quot;</bucket>
+              <bucket>&quot;Adventure&quot;</bucket>
+              <bucket>&quot;Mystery&quot;</bucket>
+              <bucket>&quot;Documentary&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='font-size' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:average_roi:qk]' value='11' />
+            <format attr='font-weight' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:average_roi:qk]' value='bold' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:average_roi:qk]' value='11' />
+            <format attr='font-weight' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:average_roi:qk]' value='bold' />
+            <format attr='font-size' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:genre:nk]' value='11' />
+            <format attr='font-weight' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:genre:nk]' value='bold' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:average_roi:qk]' max='10.0' min='1.0' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-diverging'>
+                <color>#ae123a</color>
+                <color>#c41e3c</color>
+                <color>#d8303f</color>
+                <color>#e84646</color>
+                <color>#f16051</color>
+                <color>#f77963</color>
+                <color>#fa9079</color>
+                <color>#fda695</color>
+                <color>#ffbab0</color>
+                <color>#fed1cc</color>
+                <color>#fbe6e5</color>
+                <color>#ffffff</color>
+                <color>#c2cec6</color>
+                <color>#adc4b5</color>
+                <color>#99baa5</color>
+                <color>#86b095</color>
+                <color>#74a686</color>
+                <color>#649b78</color>
+                <color>#54916a</color>
+                <color>#46875e</color>
+                <color>#397d52</color>
+                <color>#2e7347</color>
+                <color>#24693d</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#d4d4d4' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:average_roi:qk]' />
+              <color column='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:average_roi:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:genre:nk]</rows>
+        <cols>[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:average_roi:qk]</cols>
+      </table>
+      <simple-id uuid='{A53D88A9-2390-4D21-B583-2C5AA7FD0765}' />
+    </worksheet>
+    <worksheet name='ROI vs Budget'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Return on Investment in Relation to Production Budget</run>
+            <run fontalignment='1'>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='genre_roi' name='federated.15y1ybh1srtyhr0zrf6t11709fgc' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15y1ybh1srtyhr0zrf6t11709fgc'>
+            <column-instance column='[production_budget]' derivation='None' name='[none:production_budget:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[return_ratio]' derivation='None' name='[none:return_ratio:qk]' pivot='key' type='quantitative' />
+            <column caption='Production Budget' datatype='integer' name='[production_budget]' role='measure' type='quantitative' />
+            <column caption='Return Ratio' datatype='real' name='[return_ratio]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]' scope='rows' value='Return on Investment' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]' value='11' />
+            <format attr='font-weight' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]' value='bold' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#d4d4d4' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]</rows>
+        <cols>[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:production_budget:qk]</cols>
+      </table>
+      <simple-id uuid='{EEDDD8EA-4FE9-49CF-BB2B-5FD99428B0B8}' />
+    </worksheet>
+    <worksheet name='Top Movie Genres'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='16'>Top Movie Genres </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='genre_roi' name='federated.15y1ybh1srtyhr0zrf6t11709fgc' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15y1ybh1srtyhr0zrf6t11709fgc'>
+            <column-instance column='[count]' derivation='Attribute' name='[attr:count:qk]' pivot='key' type='quantitative' />
+            <column caption='Count' datatype='integer' name='[count]' role='measure' type='quantitative' />
+            <column caption='Genre' datatype='string' name='[genre]' role='dimension' type='nominal' />
+            <column-instance column='[genre]' derivation='None' name='[none:genre:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:genre:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Drama&quot;</bucket>
+              <bucket>&quot;Horror&quot;</bucket>
+              <bucket>&quot;Documentary&quot;</bucket>
+              <bucket>&quot;Comedy&quot;</bucket>
+              <bucket>&quot;Romance&quot;</bucket>
+              <bucket>&quot;Thriller&quot;</bucket>
+              <bucket>&quot;Mystery&quot;</bucket>
+              <bucket>&quot;Sci-Fi&quot;</bucket>
+              <bucket>&quot;Family&quot;</bucket>
+              <bucket>&quot;Biography&quot;</bucket>
+              <bucket>&quot;Crime&quot;</bucket>
+              <bucket>&quot;Adventure&quot;</bucket>
+              <bucket>&quot;Action&quot;</bucket>
+              <bucket>&quot;History&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='font-size' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:count:qk]' value='10' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:genre:nk]' value='11' />
+            <format attr='font-weight' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:genre:nk]' value='bold' />
+            <format attr='font-size' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:count:qk]' value='11' />
+            <format attr='font-weight' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:count:qk]' value='bold' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:count:qk]' palette='red_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#d4d4d4' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:genre:nk]' />
+              <text column='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:count:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:genre:nk]</rows>
+        <cols>[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:count:qk]</cols>
+      </table>
+      <simple-id uuid='{6B2B1E38-3848-48A5-A31D-107F28DCB15D}' />
+    </worksheet>
+    <worksheet name='Top movies by ROI'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='16'>Top 30 Movies by Return on Investment</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='genre_roi' name='federated.15y1ybh1srtyhr0zrf6t11709fgc' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15y1ybh1srtyhr0zrf6t11709fgc'>
+            <column caption='Movie' datatype='string' name='[movie]' role='dimension' type='nominal' />
+            <column-instance column='[movie]' derivation='None' name='[none:movie:nk]' pivot='key' type='nominal' />
+            <column-instance column='[production_budget]' derivation='None' name='[none:production_budget:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[return_ratio]' derivation='None' name='[none:return_ratio:qk]' pivot='key' type='quantitative' />
+            <column caption='Production Budget' datatype='integer' name='[production_budget]' role='measure' type='quantitative' />
+            <column caption='Return Ratio' datatype='real' name='[return_ratio]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:movie:nk]'>
+            <groupfilter count='30' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='AVG([return_ratio])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:movie:nk]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]' included-values='in-range'>
+            <min>-1.0</min>
+            <max>430.51999999999998</max>
+          </filter>
+          <slices>
+            <column>[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]</column>
+            <column>[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:movie:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:production_budget:qk]' scope='cols' value='true' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:production_budget:qk]' value='C1033%' />
+            <format attr='font-size' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]' value='11' />
+            <format attr='font-weight' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]' value='bold' />
+            <format attr='font-size' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:production_budget:qk]' value='11' />
+            <format attr='font-weight' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:production_budget:qk]' value='bold' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]' palette='tableau-map-temperatur' type='interpolated' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#d4d4d4' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='stroke-color' id='refline0' value='#0000004b' />
+            <format attr='fill-above' id='refline1' value='#00000000' />
+            <format attr='fill-below' id='refline1' value='#00000000' />
+            <format attr='stroke-size' id='refline0' value='4' />
+            <format attr='stroke-size' id='refline1' value='4' />
+            <format attr='font-size' id='refline1' value='11' />
+            <format attr='font-weight' id='refline1' value='bold' />
+            <format attr='font-size' id='refline0' value='11' />
+            <format attr='font-weight' id='refline0' value='bold' />
+            <format attr='color' id='refline0' value='#000000' />
+            <format attr='color' id='refline1' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]' />
+            </encodings>
+            <reference-line axis-column='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:production_budget:qk]' enable-instant-analytics='true' formula='average' id='refline0' label-type='value' probability='95' scope='per-pane' value-column='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:production_budget:qk]' z-order='1' />
+            <reference-line axis-column='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]' enable-instant-analytics='true' formula='average' id='refline1' label-type='value' probability='95' scope='per-pane' value-column='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]' z-order='2' />
+          </pane>
+        </panes>
+        <rows>[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]</rows>
+        <cols>[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:production_budget:qk]</cols>
+      </table>
+      <simple-id uuid='{42990119-F614-4CE6-8E27-B30F2AD73E02}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='ROI vs Budget'>
+      <cards>
+        <edge name='left'>
+          <strip size='200'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='38'>
+            <card type='columns' />
+          </strip>
+          <strip size='38'>
+            <card type='rows' />
+          </strip>
+          <strip size='38'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:ok]</field>
+            <field>[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{F50F7F97-8641-4426-AFA5-028F6C31EACB}' />
+    </window>
+    <window class='worksheet' name='Top movies by ROI'>
+      <cards>
+        <edge name='left'>
+          <strip size='200'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='38'>
+            <card type='columns' />
+          </strip>
+          <strip size='38'>
+            <card type='rows' />
+          </strip>
+          <strip size='38'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.15y1ybh1srtyhr0zrf6t11709fgc].[Top Movies by ROI]</field>
+            <field>[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:movie:nk]</field>
+            <field>[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:return_ratio:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{5280C724-D4B8-4532-96F2-85568C73DAF3}' />
+    </window>
+    <window class='worksheet' name='Top Movie Genres'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:genre:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:genre:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{3D600034-C3A2-4747-8EC3-EA7D82D6C653}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Genre ROI'>
+      <cards>
+        <edge name='left'>
+          <strip size='200'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.15y1ybh1srtyhr0zrf6t11709fgc].[attr:average_roi:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.15y1ybh1srtyhr0zrf6t11709fgc].[none:genre:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{BF7E7AC7-730F-4945-B30D-DB55F41623D1}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Genre ROI' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAAXUUlEQVR4nO3dW2wc15ng8f+pqu7qZt94aZJqXkSJkiiSopxIjmNnYCuYBHaARIGwSBbY
+      LDbYwN4Y+xQsMAkSBAiw8zDAADsIAgTCYGLA8vgSOA4GQW7wg8ceO7ZjSZbtSLJI3SiKF/Ha
+      zUs3+36peaCs2KsoXRS7WaTq+z3YIvvrrnNAfqxzqs53SlUqFQshXMoAGB4edrodQjhCc7oB
+      QjhJEkC4miSAcDVJAOFqkgDC1RxNAMMw0HXdVqxpmrY/tx6xSik8Ho+tWF3XMQyjpsevV6xS
+      Cq/X69jx6xVrN07OAMLV7P2ZqqN/fPlfiKcWq8ZpSqNiVWx9Zn1iFUopLBuxCgWARfV7jNup
+      X8631X6s3TjHE2B0YYLZ5QWnmyFcSoZAwtUkAYSrSQIIV9vAHMDi8oVzJJIZWttjKKXYs7vn
+      1qsriXksw2QhsUy5mKV/f38NmitEbW3gDKDoGziA1xegd2eMiWuXefOtk8xNT3Dq9HssJJYo
+      lspksznS6QwL0+O8/dZbzC0kOH3qHcamZmvXCyHuUs2uArXGdmJaebLZLB2798HyFKXyny9D
+      3bgxS0dXB6vJZZQZYnfXjlodWoi7trEEUIpIOIRSGqFQEI9lonu9mA0+isUQuuklFApQ9hk0
+      B00uj91gZ08PrV5/jZovxMZsMAF09u7ZDUBPd+cnXwt0A9AcCd/61kPtXRs6nBC1JleBhKtJ
+      AghXkwQQrub4WqBPdw+w2NRRNU7XNMoVewum6hGr1NrSYTubaGhqbTFcxaoe63i/AKVpVGzE
+      Ot3W9cTa7n+lUrGc2hXCMAwsy6JcLleNNU2TfD5v63PrEauUwjAMisVi1Vhd11FKUSqVHGnr
+      emI/qnMoFAqOHL9esXbjZAgkXE0SQLia43OAdD5DoVR9WGFaRfunyTrEakrDMHQKNoZAhq4D
+      ilLZxhBoK/SrZFAo2hgCOdzW9cTajXM8Af7PL/5BCmKEY2QIJFxNEkC4miSAcDVJAOFqG54E
+      55PzTCYVrZ4sq3oTbWEvltLRFZQrlZtbblgYhkE+X8DnM2/eIFK2N48Sol42/BtolUuMfDjC
+      lF6kq2+IUyPjoCnamgLE0xYBLU9Bb8CvSuQKRcJNLYyPXWPg4CF2SVGMcFhNhkC9+we5b3Af
+      5WIOf6SFoKlTQufA0BB+n5+hoSGKpRK7dnaSyWRo6+yha0e0FocWYkM2fAYwGiJ06Aq/HqCj
+      ySQZv4Hl6SXSoGN6NNpinXg0xUD/fsYmZxjY38dqJleLtguxYRtPADNA0819SH1AaGfvJ173
+      NresxQXCDPSvVYetZzNUIepJrgIJV5MEEK4mCSBczfEL8f/zc/+F1VymapzHMCjaKDCpV6xS
+      Ck3TbBXvaJqGAlsVSVuhX7qu2yrecbqt64m13X+pCJOKMKkIE8KlJAGEqzk+B0ikl22dfr2m
+      l0K+ely9YjVNQ9d120MglKJsYwjkdL+UUhgeg2Kher/u9JnNwUYMzd7DDrcaxxPgB//2/6Qi
+      bJv75//x98QibU43467IEEi4miSAcDVJAOFq60wAi1xu/Ss5K5UyhaK9Gx1CbCZbk+DTf3yD
+      ivLQ2NZNyKfREdtBajVDMBSkVMhRKFUwvV7K5TKarpPLZmgIhCgV8xRLFQwrw9h0hl0729EU
+      mKaXQqEkFWH3kOHhYX7961/z/e9/n+eee454PM7jjz9OU1MTTz31FMVikaNHj/LLX/6SYDDI
+      t7/9bTTN+QGIrd/AYqEAOuiGwdzsLKtLC+TKoHkbSMZnUVTo6upmdDrOwb5djF69ihGMUlyZ
+      xeMxiLTHWJidYyE+w46wj0g0SqpgMLCnod79E5tk7969xGIx8vk8hmHw9a9/nQsXLvDwww+T
+      SqUIBAJMTExw5MgRxsfHWV1dJRwOV//gOrOVgt6GEP37+1hKrF2uzBdLtLVGyefSGGaABr8X
+      UOzbP0guuUgg0kypWMDr89MUCVEuV4h176IpFKBnVxfv/2mEzlhrPfslNlk6nWZpaYmVlRUS
+      iQRnz54lEomQTCZ59NFHaW1tZXl5mYsXLzI7O7tlakJsnQG6OmLEl1c5MNBPPrtKKOBnfGqa
+      gweGGLs8zNTsErv62vCaJkZwJ8XZOLFYI6MXz6MaOujdESVbsCg3+UHXaW1rxe/dnjdOxF82
+      NzdHX18fc3NzHDt2jHg8Tm9vLwsLa38029vbeeihh/jTn/5EOBzeXgkQ6+ohdvPfAX8zAHv3
+      7AHLIhQOM9jaSSQcZG1XfA+7dwUA0AeGaGxsXPuuF8DPcmKegYGBm7HiXtHf309//5+fBd3X
+      10c+nycQCHwi7v7779/spv1VG35KZOfO3Xd8+aNf/k98r2V73jEU9ybnp+FCOEgSQLia4xfi
+      nzzy38jYqQjzeGytxKxXrFIKTddtrfDUNA2UomKj0Gcr9Mt2RdgdPrPR7/zlzLvleAI8sOug
+      VITdgxVh24UMgYSrSQIIV3N8CPQfF0+Syqarxnk8BkWbC+rqEbs2B9Aol2zuCqGgXLaxK8QW
+      6Jeua5Rs9Ovjn9nR2MahnYO22rKVOZ4APz/9W6kI24Ye2feZeyIBZAgkXE0SQLiaJIBwtZom
+      gFUps5hIkPvYFhvx+VmKN+dXK8uLLMQTpJYTJDP2tvcQW1s+nyeVSmFZFuPj47cqBi3L4vr1
+      6ySTSXK5HFevXrV1v2ez1XQSPH7lAislk5ZCmaDHYjqxSkvEz0dLPy+cP0t712484QY59dwD
+      SqUSJ06cYNeuXTQ3NzM8PEyhUODJJ59kcnKSs2fPMj4+TiAQIBQKcfHiRY4ePep0sz+hpr+H
+      bR3dpJfmyeRyXB6dYFd3B/HZGRbjs4yO36CYz5FILJJaWiSVlTPAdmcYBl/96ldRSnHjxg2O
+      HTuG1+vFsiw6OzvJ5/McOnSIpqYmrl27RnNzs9NNvk1NzwDJ5WXMhgZSqVU8qsSVa+PoQKgx
+      SnMTrCTaOHz4MHPXLyEl8ttfPp/nN7/5DVNTU3zlK1/h6aefJhqNcvbsWXK5HB9++CF+v5+V
+      lRWamppYXl52usm3qWkCtHf20NzeieHxgGVRLlfQNIWm6SgFn/rUpwFo3bkXlAyCtjuv18s3
+      v/lNABoaGjh06BDem5sj+Hw+hoaG0DQN0zTJ5XI0NGy9GvCaJoDSNLxe780v1G1V/7q+Vgap
+      bdN9JMUnKaUIBoO3vvb7/cDaz9nj8Xzitf+/MmyrkD/DwtUkAYSrSQIIV3N8Mdzx//5/KZaq
+      F5k4XTiiaRqGblAoVr98u70KYjQ8HmPdBTH6FtjVrRYcTwCv4UG3cUXI9Jio6quL6xb7UUWY
+      ZmNDl1sJoKpP9rdCvzweD5pVvV/rOf52cW+ksRB3SRJAuJrjQ6Cf/PszLKaq3yHUNI2Kjefu
+      1i1WrQ0XrIpVPVQpUNiK3U79+vhnDnX28bX7v2SrLVuZ4wlwYfqKVIRtQ0Hf1rurezdkCCRc
+      TRJAuJokgHC1DSXA6uoqYLG6usrC7A0Ktwp+rJuviXuZZVkMDw8zOjpKLpfj5z//OaOjowCk
+      Uimef/553n//fa5evcqJEyeIx+MOt/h2G0qAy5cvARaXL10BFKVCmg/eO8PMzAyv/vurjE/P
+      MXZlhCtjUywlFhgdvcb18UlKpQJzC4u16YFwTLlcZnR0lKtXr/LGG29w6NAhXnnlFSzLolgs
+      8thjj/HOO+9w8uRJotEoZ86ccbrJt9lQAmRTS5w6dZql1RzxuRlWlhZJZovovgDd3TtpD+kk
+      C16KyTkmJidQvjBGaZVLl65QdP4ClNggwzA4fPgwALlcjmg0ems5vMfj4aWXXuLYsWMopTBN
+      E8uqfql1s20oAfyhJh588LM0BX1rH2Z48aoy8cQKpVyS6cU0qfgU8VQev2nS2tJEbGcPExM3
+      2NESqkkHhHNyuRy/+tWvOHPmDAMDAzz77LP09PRw5swZzp8/Ty6X449//CNtbW2MjIzQ0dHh
+      dJNvoyqVijU8PHxXb7YsC6VgPYk9f2OMhTQM7e/FMAz+17/+UO4DbEOP7PsMf/fYE3d83elF
+      fnbjNjQOUUrd/L/997R17kYekiS2ik0fiKv1ZIsQdSb3AYSrOX4ppn9HL62Bpqpxzi8aUygU
+      llU99qOznJ2rHo73C4XSFJaN2I9/5s7mrTehvRuOJ8DfPfaEPCJJHpHkGBkCCVeTBBCuJgkg
+      XM3xOcCL515mOZOqGuf0ZFEphQIqNia2W3ES3Blu48v7H7H1XjdxPAFuJBdYTG+9TVPvNR7d
+      8R/1liRDIOFqkgDC1SQBhKutKwFSi3OcPHmSq+M36tUeUUeWZfH73/+eF1988dbNx3w+z3PP
+      PcfS0hJPPfUUb7zxhsOt3Fzrmhmlk8t07O5n8uowzX4YuXKdzl17WZoeYzVbwPR5aW7fSWU1
+      TjxVYE93lGtTcwTCLYT0PAupIh3RMOOTM/Tfd5j2ZqkJ2EzlcpkrV65gGMatp7a8/PLLTE9P
+      4/P56Ovr48qVK3z+8593uqmbZn1DIKvChQ9O4g23cmNqls889FkSczPoZpCeWAt7+g6QXlkE
+      w4thZUmlC+wdOEgpk2IxleOBw59ibnaOzs52kslknbok7qRUKmGaJpFIhGw2SzKZ5NVXX+XS
+      pUtMTk4SjUbJ5/NbsnKrXtaVAGZDiM/+zecJGwV2dMZ479S7tHd2Ew6F8AVCeD0GoVCQdHKF
+      iuYlEAjgNXQikQjtzSHOfHCOWGcHs3MJGvy+evVJ3IHX68Xn85FKrd13mZ6e5qc//Snf+MY3
+      UErx+uuvE4vFXLVkfUMVYRtlGAb/9Oa/yn2ATdDb3MW3Dh+77fv1WgzndKztbe9tHVWIe5Qk
+      gHA1SQDhao4vENnb0s2Kv7FqnK7rtgpn6hWrlEIpZX/hnM3YzerXjlDU1vvcxvEEODbwt1IR
+      5vDE0s1kCCRcTRJAuJrjQ6BcqUDJxmNSK5pFvmjvlF6PWKVpGFbJ3hCoooNSlG0MgTarX5rS
+      MA2vrfe6ieMJcPzki3IjbBPc6UaY28kQSLiaJIBwNUkA4WqSAMLVNpwA5VKO0++8zQcfXrxj
+      TKVUYHp2HqdWnYo15XKZ48eP8+Mf//jWM9xmZ2f53ve+x8zMDMePH+eZZ55xtpGbbMNXgaxy
+      kUyuzO7uCLOTY1y9PsX+A0NcunCOYtnCqyt6+4dIrWbI5bJcHrlAR1cns4sZ+vfsrEUfhE1K
+      KdLpNNls9tZSjddee429e/fS3t5OIBBwVTEM1GgI5A8EaQyHyOaLtDY2sLicprmtk5bmFgb3
+      dpFazZIvrF2TbmsO8f4HH9IcbanFocU65PN5Ghoa6O/vZ2ZmhkQiwcTEBKdOneLdd9/l0Ucf
+      JR6PuyoJNnwGUJpBLBYjEg6yOFciXaiwo91PpWRQ8Xvx+kxCuoHPo1H2e4m0xuDyJE0NZi3a
+      L9bB5/PxwAMPsLq6SjQaZWlpiR/84AeMjo4SiUR4/fXXOXr0qKsqwjacALrHz85uPwC79w2y
+      +y/EBD7277mpMXr7+tf1WCVRG0opHnzwwVtfNzaurcLt7++nUCjwta99zammOWbT7wS3d/2l
+      FBHCGXIZVLiaJIBwNccXwz2273Nk8tmqcR7DQ9HGqtF6xSql0DWdUrn6Ck9N01AoypXqhT6b
+      1a+wGbT1PrdxPAEOtu+TijCpCHOMDIGEq0kCCFdzfAg0PH+NbGF7zAE0Tadscw4AisoWmgOE
+      vAH2tHTbeq+bOJ4AL19+SyrCNkFvc5ckwF8gQyDhapIAwtUkAYSrbTgBLKtCcmWFbE6uOW8H
+      yWSSRCJx62vLspifn6dSqTAzM0M6nXawdZtvw5PgciHNmTPvE/B72Nl3EL2cxdI8ZJMJfOFW
+      fHqZxOIyps8E3aSxwWBqNkHvnj0Yjk/B3aVUKnH8+HF0XeeJJ56gpaWFs2fP8vTTT/PDH/6Q
+      t99+m+vXr/Pd737X6aZumpoMgaLtnRz69CAL09NcGLlEg98kly8wMjLC7NQEHtNgZj7J1OR1
+      stkMmZV5xqcT1T9Y1NRHm/ZmMhlM06RQKPDWW2+xb98+AoEAqVSKSCQiBTHrtTAzRTa1QM/e
+      fjSPjqeSYS6x9hgeTTdobIyQyeukk3mmp6awbO6cLGqrWCxSqVQIhUJMTU1hWRY9PT28/fbb
+      fPDBBwQCASYnJ51u5qbaeEGMN8BDn3sA3WNiej20NIYxDIPP3h9EMww0pdB1nT27QliVdjQF
+      pXIFw/DUov1iHXw+H9/5zncolUoEg0GKxSKDg4N86UtfQtM0EokE4XBYKsLWQymNQPDPjzv1
+      eNZ+sf0NDZ+IW7s7evOg8rvvmGDwz6tCjZuTsEAgQKFQoK2tzalmOUYugwpXkwQQriYJIFzN
+      8Svx//vB/2qryMTpwhFN09B1fdsWxOiabut9buN4AgQ8fspa9Qc3mKaJ12Zz6xF7qyJMW0cC
+      6PYSwMl+uZ0MgYSrSQIIV3P8HHlq+kNbu0JoukalbO/ucV1i1dowyKpUXyaglAKFrdiNtrU7
+      3M7uxk5b7xe3czwBbqTmSeZWnW7GthXyNlQPEnckQyDhapIAwtUkAYSr3XUCZFdXOH/+POmc
+      vW06AMauXUMWQdfe/Pw8L7zwAi+99NKtZeZLS0u8+eabLC8v84tf/MJ1y5zturtJsFXh3IfD
+      DB68D1XO8e6p9wi1xPBZWeYXl9EMD2ZDhGhAY3wmwdDBA1y6cJ6FpQwVq0JnZ4z5xCq9PXL1
+      ohaam5v58pe/zAsvvLB2pcqy+O1vf8vS0hLJZJJwOMwrr7zC448/7nRTt5y7OwNYFTSPSSgQ
+      IBWfYUfvIJmVOKvZAgP7dxFq7qSYWWFi6gbRiI+xq5dp7NjHjpYIQVNx7twwvmC4xl1xL8Mw
+      GBkZ4ciRIyilGB4e5vz581y4cIFcLkexWMTn8zndzC3p7hJA02mL+Hnn5CnwNzJ5+RyaL4Tf
+      78cwPPhMLw0NDbRFm4mvZGhtjzE7NsxqvkQ01k0qlSYalh9ILc3OzjI0NMSlS5eIRqP86Ec/
+      4pFHHqG7u5uxsTEikYjTTdySVKVSsTbz8aVzU9dIlf3s7YlhGAb/dvFVuQ+wAUPRPRza0X/b
+      99ez67XH46FQKFSNdXpB4npi7cY58IikXto3+6BC3IFcBhWuJgkgXM3xtUBNvhAG1Ys1NE1R
+      sbG4rF6xSq39x95iOABla3+djbbV75GLCRvheAL8bc8D8ogkeeyRY2QIJFxNEkC4miSAcDXH
+      5wCnZy/YqwjTNNv7idYr9qN1NnbiAJuT4Ltra1eojd0RWUu1UY4nwEJmiVTOXXvS10JEHnxd
+      EzIEEq4mCSBcTRJAuFpNEsAqlxgeHuHjNymXE/NkC2XmZ6YoVL/PJe7C3NwcP/vZz3jmmWco
+      l8vkcjmef/55XnvtNdLpNM8++yzT09NON3NLq8kkOLU4y+LiIvFkjuzCGPPJAsXUPBVfKx3R
+      AP7MCu+dv0Dzjm4q6QQrqTR7Dhwi1iJFMRvR1tbGt771LU6cOIGmaSil2LdvH6dPn2ZlZYUv
+      fvGL/O53v+PJJ590uqlbVk3OABPj45TKBSYmxomv5PjMofvYsSPGgaFBcqkkN6Ym2XfwMKtL
+      8xQtjaH9PSwupWpxaFdTSnH69GkefvhhlFKYponf76dSqZDJZGhra0PXZVPcv2bjCWBV8IRa
+      OfLIEUKmRkvI5Mz754g0NXNpeAQzGKSjs4vL596jIRIlEAige0z8vuob4orqlpaWGBwc5PLl
+      y5w9e5Y//OEPBINBvvCFL/CTn/yEwcFBp5u4pW16RdjHGYbB70bflPsAd2F/cw/3te674+tS
+      EWZz23tbRxXiHiUJIFxNEkC4muNrgVp8EXyq+oTY8cVw69oefe0N9VwMF/D4bb1H/HWOJ8BD
+      HQelIkwqwhwjQyDhapIAwtUkAWz6qMhF3FscnwN4Al40G5PACuDxmLY+s16xAB5zHbF32O7F
+      qlQoZexvKy/qR84AwtUkAYSrSQIIV6trAti9wSOEU/4T6Cu4kh8ZvG0AAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='ROI vs Budget' width='192'>
+      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
+      AABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Top Movie Genres' width='192'>
+      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
+      eN/+H0uANcyL1F03AAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Top movies by ROI' width='192'>
+      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
+      AAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
