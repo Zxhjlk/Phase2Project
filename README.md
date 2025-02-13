@@ -28,7 +28,7 @@ Calvin
 <h3 align="center">Expanding Into the Film Industry</h3>
 </div>
 <p>
-This project explores box office data to analyze what metrics are associated with well performing movies. [PG Rating, Genre, Franchising]
+This project explores box office data to analyze what metrics are associated with well performing movies. The metrics we settled on are Age rating, Genre, and Franchising.
 </p>
 
 ## Data
@@ -41,41 +41,35 @@ The data comes from various online databases that store information related to f
 
 ## Results
 
-### Graph
-<img src='Images/' width='800'>
+### PG-13 and PG tend to perform better than the other ratings, likely due to a broader audience.
+<img src='images/age_rating_profit.png' width='800'>
 
-### Graph
-<img src='Images/' width='800'>
+### Focusing on movies with a high Return on Investment leads to around a $2 million budget
+<img src='images/top_30_roi.png' width='800'>
 
-### Graph
-<img src='Images/' width='800'>
+### Within a $2 million budget, thrillers and horrors performed substantially better than any other genre.
+<img src='images/genre_roi.png' width='800'>
 
-### Graph
-<img src='Images/' width='800'>
+### When exploring franchised films, medium budget films have a solid ratio of ROI, revenue, and production costs
+<img src='images/roi_vs_production.png' width='800'>
 
-### Graph
-<img src='Images/' width='800'>
+### While low budget films have a higher ROI, medium budgets films actually have the lowest variance.
+<img src='images/roi_distribution.png' width='800'>
 
-### Graph
-<img src='Images/' width='800'>
-
-### Graph
-<img src='Images/' width='800'>
-
-### Graph
-<img src='Images/' width='800'>
+### In terms of franchised films, animation and family are the best performing genres.
+<img src='images/franchise_genre.png' width='800'>
 
 
 ## Conclusions
-* **PG Rating** 
-* **Genres** 
-* **Franchising**
+* **PG-13 and PG movies are the age ratings to focus on** They offer the best balance of accessibility and profitability since there is a broader audience. R-rated and G-rated movies face revenue limitations due to audience restrictions. 
+* **Horror and Thriller are the best performing genres with a limited budget** Before the company explores franchised films, it should focus on low budget, but high return on investment films. As such, with a 2 million dollar budget, horror and thriller are substantially higher performing than other genres, both with an average return of almost 4000%.
+* **When stable enough to invest in a franchised series, medium budget films have a high revenue potential** Once the studio has had success with the low budget films, franchised series have the potential to perform very well. Medium budget films, defined as movies with a 125-200 million budget, have constitent and predictable returns compared to low budget films, which have higher returns, but are inconsistent. Within franchised series, animation and family do particularly well.
 
 
 ## Next Steps
 Further steps
-* Step 1 
-* Step 2
+* Exploring how streamed movies compare to movies that come out in theaters
+* Explore if there is a strong correlation between large advertising budget and how well a movie performs
 
 <!-- https://home.aveek.io/GitHub-Profile-Badges/ -->
 
